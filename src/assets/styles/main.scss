@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "compass/reset";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, html{
+    font-family: 'Noto Sans TC', '微軟正黑體';
+}
