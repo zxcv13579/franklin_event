@@ -6,6 +6,7 @@ html(lang="zh-tw")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 		title
+		link(rel="stylesheet" href="./assets/styles/animate.css")
 		link(rel="stylesheet" href="./assets/styles/main.css")
 	body
 		include /jadeTemplate/_header.jade
@@ -51,7 +52,7 @@ html(lang="zh-tw")
 					span 隨時都是進場時機
 				div
 					img(src="./assets/images/time&money.png")
-				div
+				div.wow.slideInUp
 					p.section__text 股市漲漲跌跌，不斷等待卻又老是錯過低點?
 						br
 						| 到底
@@ -283,6 +284,7 @@ html(lang="zh-tw")
 
 
 script(src="./assets/scripts/TweenMax.min.js")
+script(src="./assets/scripts/wow.min.js")
 script(src="./assets/scripts/jquery.min.js")
 script(src="./assets/scripts/typeWriter.js")
 script(src="./assets/scripts/main.js")
