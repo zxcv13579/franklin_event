@@ -9,9 +9,16 @@ html(lang="zh-tw")
 		link(rel="stylesheet" href="./assets/styles/main.css")
 	body
 		include /jadeTemplate/_header.jade
-		main
-			picture.human
+		div.intro 
+			div.intro__a
+				img(src="./assets/images/a.png")
+				img.intro__sprite(src="./assets/images/a-sprite.gif")
+			div.intro__b
+				img(src="./assets/images/b.png")
+				img.intro__sprite(src="./assets/images/b-sprite.gif")
+		picture.human
 					img(src="./assets/images/human.png")
+		main
 
 			section.section
 				
@@ -195,8 +202,7 @@ html(lang="zh-tw")
 		footer.footer
 			div.footer__info
 				div
-					img(src="./assets/images/logo.png")					
-				div
+					img(src="./assets/images/logo.png")
 					p.footer__tel 基金專線 
 						strong 0800-088-899
 			p.footer__text 富蘭克林華美證券投資信託股份有限公司 107金管投信新字第006號
