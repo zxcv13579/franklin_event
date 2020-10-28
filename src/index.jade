@@ -21,12 +21,10 @@ html(lang="zh-tw")
 		div.intro 
 			div.intro__a
 				img(src="./assets/images/a.png")
-				img.intro__sprite(src="./assets/images/a-sprite-1.png")
-				img.intro__sprite(src="./assets/images/a-sprite-2.png")
+				div.intro__loop
 			div.intro__b
 				img(src="./assets/images/b.png")
-				img.intro__sprite(src="./assets/images/b-sprite-1.png")
-				img.intro__sprite(src="./assets/images/b-sprite-2.png")
+				div.intro__loop
 		picture.human
 		main
 
@@ -42,9 +40,9 @@ html(lang="zh-tw")
 				br
 				p.section__text.highlight 新朋友線上開戶，送紅利3,000點
 				div.section__btn
-					a 免費開戶
+					a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 免費開戶
 					span
-					a 我要申購
+					a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank") 我要申購
 			section.section#regular
 				div.coin
 					div
@@ -54,7 +52,7 @@ html(lang="zh-tw")
 					div
 				h2.wow.zoomIn.title 只要選對方法
 					span 隨時都是進場時機
-				div.wow.fadeInLeft
+				div
 					div.section__loop
 				div.wow.fadeInUp(data-wow-delay="0.2s")
 					p.section__text 股市漲漲跌跌，不斷等待卻又老是錯過低點?
@@ -71,9 +69,15 @@ html(lang="zh-tw")
 						| 買基金
 						br
 						| 隨時都能開始定期投資，讓投資專家帶你長期佈局!
-					div.section__btn
+					div.section__btn#goToMeal
 						a 定期定額基金套餐
-			section.section
+			section.section#what
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
 				h2.wow.zoomIn.title 什麼是定期定額投資?
 				br
 				br
@@ -101,6 +105,16 @@ html(lang="zh-tw")
 						| / 尾
 				p.wow.fadeInUp.section__text(data-wow-delay="0.5s") 6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元尾。
 			section.section#meal
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
 				h2.wow.zoomIn.title 定期定額就從
 					br
 					| 2千元買2檔基金開始
@@ -126,12 +140,11 @@ html(lang="zh-tw")
 						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.3s")
 							p.setMeal__text 中國A股基金
 								span 純度投資A股，深入中國內地市場
-						div.wow.flipInX.setMeal__btn(data-wow-delay="0.6s")
-							a 免費開戶
-							span
-							a 我要申購
-						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
-							strong 終身0元手續費!
+						div.setMeal__btn(data-wow-delay="0.6s")
+							a.wow.flipInX(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 立即開戶 
+								span 讓投資動起來
+							p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
+								strong 終身0元手續費!
 				div.setMeal
 					div.section__loop
 					div
@@ -146,13 +159,18 @@ html(lang="zh-tw")
 						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.5s") 
 							p.setMeal__text 富蘭克林華美新世界股票基金
 								span 佈局全球，分享新興經濟體的高成長動能
-						div.wow.flipInX.setMeal__btn(data-wow-delay="0.8s")
-							a 免費開戶
-							span
-							a 我要申購
-						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
-							strong 終身0元手續費!
+						div.setMeal__btn(data-wow-delay="0.8s")
+							a.wow.flipInX(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 立即開戶 
+								span 讓投資動起來
+							p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
+								strong 終身0元手續費!
 			section.section#online
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
 				h2.wow.zoomIn.title 有網路就能隨時開始
 				p.wow.fadeInUp.section__text 只要2步驟，完成線上開戶預約，開始 
 					strong #定期定額 
@@ -167,13 +185,17 @@ html(lang="zh-tw")
 							h3.step__title 約定銀行自動轉帳授權
 							p 請填寫一組常用的銀行帳號，授權投資款自動匯入或轉出，不必出門臨櫃辦理哦。
 					div.wow.flipInX.step__btn(data-wow-delay="0.5s")
-						a 線上開戶 送紅利3000點
+						a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 線上開戶 送紅利3000點
 				p.wow.fadeInUp.section__text.highlight(data-wow-delay="0.6s") 最超值的
 					strong 手續費0元
 					| 優惠
 					span 只到2020/12/31止
 					span
 			section.section#investment
+				div.coin
+					div
+				div.coin
+					div
 				h2.wow.zoomIn.title 投資找阿富！
 					span 網路理財的好夥伴
 				p.wow.fadeInUp.section__text 投資找阿富！網路理財的好夥伴。
@@ -186,7 +208,7 @@ html(lang="zh-tw")
 					br
 					br
 					| 關於基金理財的各項諮詢，歡迎利用免費專線 0800-088-899 、或利用
-					a(href="/" target="_blank")
+					a(href="https://www.ftft.com.tw/WebMobile/Customer/Contact" target="_blank")
 						strong 線上留言
 					| 與我們聯絡。
 				img(src="./assets/images/protagonist.png")
@@ -259,29 +281,23 @@ html(lang="zh-tw")
 					li ・【富蘭克林華美投信獨立經營管理】
 		div.fixed
 			div.fixed__container
-				div.fixed__item
+				a.fixed__item
 					div.fixed__icon
 						img(src="./assets/images/online.png")
 					div
 						p 線上開戶
-				div.fixed__item
+				a.fixed__item
 					div.fixed__icon
 						img(src="./assets/images/money.png")
 					div
 						p 我要申購
-				div.fixed__item
+				a.fixed__item
 					div.fixed__icon
 						img(src="./assets/images/phone.png")
 					div
 						p.fixed__tel 需要專人聯絡您?
-							a 請點我
+							span 請點我
 
-
-
-
-
-
-				
 
 
 script(src="./assets/scripts/TweenMax.min.js")

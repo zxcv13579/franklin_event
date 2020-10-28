@@ -22,7 +22,9 @@ body, html{
 }
 
 body {
-    overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+    // overflow: hidden;
 	// margin-top: 450px;
 	background-image: url('../images/mask.png');
 	background-size: 100% auto;
@@ -30,9 +32,9 @@ body {
 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	// @media screen and (max-width: $breakpoint-md) {
-	// 	margin-top: 300px;
-	// }
+	@media screen and (max-width: $breakpoint-md) {
+		background-image: url('../images/mask-m.png');
+	}
 }
 
 // .wow {
@@ -52,6 +54,7 @@ body {
 	background-color: #fff;
 	padding: 15px 40px;
 	z-index: 1000;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 	@media screen and (max-width: $breakpoint-xl ) {
 		padding: 10px 15px;
 	}
@@ -234,7 +237,31 @@ strong {
 		@media screen and (max-width: $breakpoint-lg) {
 			max-width: 320px;
 		}
-		
+		&:nth-of-type(1) {
+			#{$this}__loop {
+				background-image: url('../images/a-sprite.png');
+			}
+		}
+		&:nth-of-type(2) {
+			#{$this}__loop {
+				background-image: url('../images/b-sprite.png');
+			}
+		}
+	}
+	&__loop {
+		opacity: 0;
+		width: 100%;
+		background-size: 100% auto;
+		animation: loop 3s steps(2) infinite;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		&::before {
+			content: '';
+			padding-bottom: 83.842794%;
+			display: block;
+		}
 	}
 	&__sprite {
 		opacity: 0;
@@ -258,8 +285,8 @@ main {
 	$this: &;
 	width: 100%;
 	padding: 80px 100px;
-	border-left: 8px solid #004093;
-	border-right: 8px solid #004093;
+	border-left: 8px solid #0161DD;
+	border-right: 8px solid #0161DD;
 	@media screen and (max-width: $breakpoint-md) {
 		padding: 80px 20px;
 	}
@@ -280,7 +307,7 @@ main {
 		margin-top: -120px;
 		padding-bottom: 100px;
 		border-radius: 20px 20px 0 0;
-		border-top: 8px solid #004093;
+		border-top: 8px solid #0161DD;
 		background: linear-gradient(178.17deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%);
 		
 		#{$this}__text {
@@ -714,18 +741,24 @@ main {
 		}
 	}
 	&__btn {
+		cursor: pointer;
 		width: 100%;
 		max-width: 420px;
 		margin-top: 25px;
-		background: #14378A;
-		box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
-		border-radius: 25px;
-		padding: 15px 0px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		// background: #14378A;
+		// box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+		// border-radius: 25px;
+		// padding: 15px 0px;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
 		a {
-			width: 49.9%;
+			display: block;
+			width: 100%;
+			background: #14378A;
+			box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+			border-radius: 25px;
+			padding: 15px 0px;
 			font-size: 28px;
 			line-height: 41px;
 			text-align: center;
@@ -735,6 +768,7 @@ main {
 			@media screen and (max-width: $breakpoint-lg) {
 				font-size: 18px;
 				line-height: 26px;
+				padding: 6px 0px;
 			}
 
 		}
@@ -742,10 +776,9 @@ main {
 			padding: 6px 0px;
 		}
 		span {
-			width: 1px;
-			height: 36px;
-			display: block;
-			background-color: #FFF;
+			@media screen and (max-width: $breakpoint-lg) {
+				display: block;
+			}
 		}
 	}
 	&__discount {
@@ -821,6 +854,7 @@ main {
 	}
 	
 	&__btn {
+		cursor: pointer;
 		width: 100%;
 		max-width: 500px;
 		padding: 15px 0px;
@@ -856,7 +890,7 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
     padding: 80px 100px;
-    border: 8px solid #004093;
+    border: 8px solid #0161DD;
 
 	@media screen and (max-width: $breakpoint-xl) {
 		width: 90%;
@@ -1057,7 +1091,7 @@ main {
 		}
 	}
 	&__tel {
-		a {
+		span {
 			background: #0C1949;
 			border-radius: 50px;
 			padding: 2px 9px;
@@ -1112,9 +1146,6 @@ main {
  }
 }
 
-body{
-  background: #024095;
-}
 
 @for $i from 1 through 6 {
  @keyframes preload-show-#{$i}{
@@ -1295,9 +1326,228 @@ body{
 			}
 		}
 	}
-	&:nth-of-type(1) {}
-	&:nth-of-type(1) {}
-	&:nth-of-type(1) {}
-	&:nth-of-type(1) {}
+	&:nth-of-type(3) {
+		.coin {
+			@media screen and (max-width: $breakpoint-lg) {
+				display: none;
+			}
+			background-repeat: no-repeat;
+			background-position: center;
+			&:nth-of-type(1) {
+				position: absolute;
+				bottom: 38%;
+    			right: -460px;
+				width: 253px;
+				div {
+					background-image: url('../images/coin-big-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.652173%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				position: absolute;
+				top: 10%;
+    			right: -240px;
+				width: 90px;
+				div {
+					background-image: url('../images/coin-small-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.333333%;
+						display: block;
+					}
+
+				}
+			}
+			&:nth-of-type(3) {
+				position: absolute;
+				bottom: 12%;
+    			right: -230px;
+				width: 190px;
+				div {
+					background-image: url('../images/coin-big-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.684210%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&:nth-of-type(4) {
+		.coin {
+			@media screen and (max-width: $breakpoint-lg) {
+				display: none;
+			}
+			background-repeat: no-repeat;
+			background-position: center;
+			&:nth-of-type(1) {
+				position: absolute;
+				top: 6%;
+    			left: -190px;
+				width: 253px;
+				div {
+					background-image: url('../images/coin-big-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.652173%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				position: absolute;
+				top: 26%;
+    			left: -300px;
+				width: 90px;
+				div {
+					background-image: url('../images/coin-small-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.333333%;
+						display: block;
+					}
+
+				}
+			}
+			&:nth-of-type(3) {
+				position: absolute;
+				top: 48%;
+    			left: -100px;
+				width: 102px;
+				div {
+					background-image: url('../images/coin-small-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.098039%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(4) {
+				position: absolute;
+				bottom: 36%;
+    			right: -360px;
+				width: 253px;
+				div {
+					background-image: url('../images/coin-big-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.652173%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(5) {
+				position: absolute;
+				bottom: 8%;
+    			right: -120px;
+				width: 190px;
+				div {
+					background-image: url('../images/coin-big-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.684210%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&:nth-of-type(5) {
+		.coin {
+			@media screen and (max-width: $breakpoint-lg) {
+				display: none;
+			}
+			background-repeat: no-repeat;
+			background-position: center;		
+
+			&:nth-of-type(1) {
+				position: absolute;
+				top: 6%;
+				left: -250px;
+				width: 190px;
+				div {
+					background-image: url('../images/coin-big-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.684210%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				position: absolute;
+				bottom: 15%;
+				right: -250px;
+				width: 253px;
+				div {
+					background-image: url('../images/coin-big-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.652173%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(3) {
+				position: absolute;
+				bottom: 20%;
+				left: -310px;
+				width: 90px;
+				div {
+					background-image: url('../images/coin-small-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.333333%;
+						display: block;
+					}
+
+				}
+			}
+		}
+	}
+	&:nth-of-type(6) {
+		.coin {
+			@media screen and (max-width: $breakpoint-lg) {
+				display: none;
+			}
+			background-repeat: no-repeat;
+			background-position: center;		
+
+			&:nth-of-type(1) {
+				position: absolute;
+				top: 10%;
+				left: -150px;
+				width: 190px;
+				div {
+					background-image: url('../images/coin-big-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.684210%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				position: absolute;
+				bottom: 15%;
+				right: -250px;
+				width: 102px;
+				div {
+					background-image: url('../images/coin-small-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.098039%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
 	&:nth-of-type(1) {}
 }

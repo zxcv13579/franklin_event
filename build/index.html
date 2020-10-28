@@ -30,8 +30,12 @@
       <div class="loading preloader"><span class="slice"></span><span class="slice"></span><span class="slice"></span><span class="slice"></span><span class="slice"></span><span class="slice"></span></div>
     </div>
     <div class="intro"> 
-      <div class="intro__a"><img src="./assets/images/a.png"><img src="./assets/images/a-sprite-1.png" class="intro__sprite"><img src="./assets/images/a-sprite-2.png" class="intro__sprite"></div>
-      <div class="intro__b"><img src="./assets/images/b.png"><img src="./assets/images/b-sprite-1.png" class="intro__sprite"><img src="./assets/images/b-sprite-2.png" class="intro__sprite"></div>
+      <div class="intro__a"><img src="./assets/images/a.png">
+        <div class="intro__loop"></div>
+      </div>
+      <div class="intro__b"><img src="./assets/images/b.png">
+        <div class="intro__loop"></div>
+      </div>
     </div>
     <picture class="human"></picture>
     <main>
@@ -39,7 +43,7 @@
         <p class="section__text"><strong>富蘭克林 #定期定額 投資</strong></p>
         <p class="section__text">每月<strong>2,000</strong>元起就能開始<span>自動化分批買進</span>不必擔心一次買在最高點!</p><br><br>
         <p class="section__text highlight">新朋友線上開戶，送紅利3,000點</p>
-        <div class="section__btn"><a>免費開戶</a><span></span><a>我要申購</a></div>
+        <div class="section__btn"><a href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank">免費開戶</a><span></span><a href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank">我要申購</a></div>
       </section>
       <section id="regular" class="section">
         <div class="coin">
@@ -52,17 +56,26 @@
           <div></div>
         </div>
         <h2 class="wow zoomIn title">只要選對方法<span>隨時都是進場時機</span></h2>
-        <div class="wow fadeInLeft">
+        <div>
           <div class="section__loop"></div>
         </div>
         <div data-wow-delay="0.2s" class="wow fadeInUp">
           <p class="section__text">股市漲漲跌跌，不斷等待卻又老是錯過低點?<br>到底<strong>何時才是進場投資好時機？</strong><br><br>如果你看好的是<strong>未來長線的成長趨勢</strong><br>建議可以透過 
             <san class="bold">#定期定額 </san>買基金<br>隨時都能開始定期投資，讓投資專家帶你長期佈局!
           </p>
-          <div class="section__btn"><a>定期定額基金套餐</a></div>
+          <div id="goToMeal" class="section__btn"><a>定期定額基金套餐</a></div>
         </div>
       </section>
-      <section class="section">
+      <section id="what" class="section">
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
         <h2 class="wow zoomIn title">什麼是定期定額投資?</h2><br><br>
         <p class="wow fadeInUp section__text">所謂 <strong>#定期定額 </strong>就是事先設定好要投資的基金、與每期投資金額，透過自動化轉帳代繳服務，由系統代為定期買進、分批布局，例如：每個月6號，自你指定的銀行自動轉出3,000元，用於買進某基金。<br><br>這種定期/自動的投資方式，能讓你不必再煩惱於自行研判買進時機點，同時，也因為是每個月的小額分批投資，最終還能達到分散進場風險、平均投資成本的好處。</p><br><br>
         <h3 data-wow-delay="0.2s" class="wow fadeInUp title__sub">連續6個月用150元買金魚，看定期定額如何加速攤平成本?</h3><br><br>
@@ -75,6 +88,21 @@
         <p data-wow-delay="0.5s" class="wow fadeInUp section__text">6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元尾。</p>
       </section>
       <section id="meal" class="section">
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
         <h2 class="wow zoomIn title">定期定額就從<br>2千元買2檔基金開始</h2><br>
         <p class="wow fadeInUp section__text">專為<strong>剛要開始投資的你</strong>設計，讓你選擇不困難<br>用小額投資加倍累積投資經驗值</p><br><br>
         <div class="setMeal">
@@ -87,8 +115,9 @@
             <div data-wow-delay="0.3s" class="wow fadeInUp setMeal__item">
               <p class="setMeal__text">中國A股基金<span>純度投資A股，深入中國內地市場</span></p>
             </div>
-            <div data-wow-delay="0.6s" class="wow flipInX setMeal__btn"><a>免費開戶</a><span></span><a>我要申購</a></div>
-            <p data-wow-delay="0.5s" class="wow fadeInUp setMeal__discount">網路定期定額<strong>終身0元手續費!</strong></p>
+            <div data-wow-delay="0.6s" class="setMeal__btn"><a href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank" class="wow flipInX">立即開戶 <span>讓投資動起來</span></a>
+              <p data-wow-delay="0.5s" class="wow fadeInUp setMeal__discount">網路定期定額<strong>終身0元手續費!</strong></p>
+            </div>
           </div>
         </div>
         <div class="setMeal">
@@ -101,12 +130,22 @@
             <div data-wow-delay="0.5s" class="wow fadeInUp setMeal__item"> 
               <p class="setMeal__text">富蘭克林華美新世界股票基金<span>佈局全球，分享新興經濟體的高成長動能</span></p>
             </div>
-            <div data-wow-delay="0.8s" class="wow flipInX setMeal__btn"><a>免費開戶</a><span></span><a>我要申購</a></div>
-            <p data-wow-delay="0.7s" class="wow fadeInUp setMeal__discount">網路定期定額<strong>終身0元手續費!</strong></p>
+            <div data-wow-delay="0.8s" class="setMeal__btn"><a href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank" class="wow flipInX">立即開戶 <span>讓投資動起來</span></a>
+              <p data-wow-delay="0.7s" class="wow fadeInUp setMeal__discount">網路定期定額<strong>終身0元手續費!</strong></p>
+            </div>
           </div>
         </div>
       </section>
       <section id="online" class="section">
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
         <h2 class="wow zoomIn title">有網路就能隨時開始</h2>
         <p class="wow fadeInUp section__text">只要2步驟，完成線上開戶預約，開始 <strong>#定期定額 </strong>投資囉!</p>
         <div class="step">
@@ -121,13 +160,19 @@
               <p>請填寫一組常用的銀行帳號，授權投資款自動匯入或轉出，不必出門臨櫃辦理哦。</p>
             </div>
           </div>
-          <div data-wow-delay="0.5s" class="wow flipInX step__btn"><a>線上開戶 送紅利3000點</a></div>
+          <div data-wow-delay="0.5s" class="wow flipInX step__btn"><a href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank">線上開戶 送紅利3000點</a></div>
         </div>
         <p data-wow-delay="0.6s" class="wow fadeInUp section__text highlight">最超值的<strong>手續費0元</strong>優惠<span>只到2020/12/31止</span><span></span></p>
       </section>
       <section id="investment" class="section">
+        <div class="coin">
+          <div></div>
+        </div>
+        <div class="coin">
+          <div></div>
+        </div>
         <h2 class="wow zoomIn title">投資找阿富！<span>網路理財的好夥伴</span></h2>
-        <p class="wow fadeInUp section__text">投資找阿富！網路理財的好夥伴。<br><br>富蘭克林華美投信2002年成立於台北，陸續在台中、高雄、新竹、台南皆有設立分公司，以在地菁英團隊，為台灣的投資大眾提供具全球視野的投資服務，為美國「富蘭克林坦伯頓基金集團」在台投資企業。<br><br>網路交易服務提供 富蘭克林華美系列 與 富蘭克林坦伯頓系列 的境內外基金投資服務，包括累積型與各種配息型級別基金。<br><br>關於基金理財的各項諮詢，歡迎利用免費專線 0800-088-899 、或利用<a href="/" target="_blank"><strong>線上留言</strong></a>與我們聯絡。</p><img src="./assets/images/protagonist.png">
+        <p class="wow fadeInUp section__text">投資找阿富！網路理財的好夥伴。<br><br>富蘭克林華美投信2002年成立於台北，陸續在台中、高雄、新竹、台南皆有設立分公司，以在地菁英團隊，為台灣的投資大眾提供具全球視野的投資服務，為美國「富蘭克林坦伯頓基金集團」在台投資企業。<br><br>網路交易服務提供 富蘭克林華美系列 與 富蘭克林坦伯頓系列 的境內外基金投資服務，包括累積型與各種配息型級別基金。<br><br>關於基金理財的各項諮詢，歡迎利用免費專線 0800-088-899 、或利用<a href="https://www.ftft.com.tw/WebMobile/Customer/Contact" target="_blank"><strong>線上留言</strong></a>與我們聯絡。</p><img src="./assets/images/protagonist.png">
       </section>
       <section id="discount" class="section">
         <h2 class="title">優惠方案說明</h2><br><br>
@@ -187,26 +232,19 @@
       </div>
     </footer>
     <div class="fixed">
-      <div class="fixed__container">
-        <div class="fixed__item">
+      <div class="fixed__container"><a class="fixed__item">
           <div class="fixed__icon"><img src="./assets/images/online.png"></div>
           <div>
             <p>線上開戶</p>
-          </div>
-        </div>
-        <div class="fixed__item">
+          </div></a><a class="fixed__item">
           <div class="fixed__icon"><img src="./assets/images/money.png"></div>
           <div>
             <p>我要申購</p>
-          </div>
-        </div>
-        <div class="fixed__item">
+          </div></a><a class="fixed__item">
           <div class="fixed__icon"><img src="./assets/images/phone.png"></div>
           <div>
-            <p class="fixed__tel">需要專人聯絡您?<a>請點我</a></p>
-          </div>
-        </div>
-      </div>
+            <p class="fixed__tel">需要專人聯絡您?<span>請點我</span></p>
+          </div></a></div>
     </div>
   </body>
 </html>
