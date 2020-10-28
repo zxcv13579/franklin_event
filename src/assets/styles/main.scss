@@ -1245,6 +1245,9 @@ body{
 	position: relative;
 	&:nth-of-type(2) {
 		.coin {
+			@media screen and (max-width: $breakpoint-lg) {
+				display: none;
+			}
 			background-repeat: no-repeat;
 			background-position: center;
 			&:nth-of-type(1) {
