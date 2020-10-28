@@ -14,16 +14,21 @@
 	});
 
 
+	$('.nav__item a').on('click', function(e) {
+		$(".nav").toggleClass("nav--active");
+	    $(".header__hamburger").toggleClass("header__hamburger--close");
+		e.preventDefault();
+		var el = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(el).offset().top - $('header').innerHeight() + 4
+		})
+	})
 
-	// var t2 = new TimelineMax({paused: true});
 
-	// t2.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.3, alpha: 1})
-	// t2.to($('.human'), 0.5, {scale: 1, y: 120, delay: 3})
-	// t2.to($('body'), 0.5, {backgroundSize: "100% auto", backgroundPosition: "center 0px"})
 
 	var tl = new TimelineMax({paused: true});
 
-	tl.set($('.human'), {y: 150})
+	tl.set($('.human'), {y: $('.intro__a').offset().top})
 
 
 
@@ -59,5 +64,31 @@
 			tl.play();
 		}, 3000)
 	})
+
+
+
+
+	var controller = new ScrollMagic.Controller();
+	var wp = new TimelineMax()
+		.add([
+			TweenMax.to($('#regular .coin').eq(0).find('div'), 0.5, {y: 300}),
+			TweenMax.to($('#regular .coin').eq(1).find('div'), 0.8, {y: 200}),
+			TweenMax.to($('#regular .coin').eq(2).find('div'), 0.4, {y: -120})
+		])
+
+	var scene = new ScrollMagic.Scene({
+		triggerElement: '#regular',
+		duration: $('#regular').height() - 50
+
+	})
+	.setTween(wp
+		)
+	// .addIndicators('container')
+	.addTo(controller)
+
+
+
+
+
 
 })()

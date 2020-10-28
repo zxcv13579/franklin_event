@@ -183,9 +183,15 @@ body {
   margin: auto;
   -webkit-transform: translateY(120px);
   -ms-transform: translateY(120px);
-  transform: translateY(120px); }
-  .human img {
-    width: 100%; }
+  transform: translateY(120px);
+  background-image: url("../images/human.png");
+  -webkit-animation: human 3s steps(3) infinite;
+  animation: human 3s steps(3) infinite;
+  background-size: 100% auto; }
+  .human::before {
+    content: '';
+    padding-bottom: 83.842794%;
+    display: block; }
   @media screen and (max-width: 992px) {
     .human {
       -webkit-transform: translateY(50px);
@@ -237,9 +243,6 @@ strong {
     left: 0;
     width: 100%; }
 
-main {
-  opacity: 0; }
-
 .section {
   width: 100%;
   padding: 80px 100px;
@@ -248,6 +251,17 @@ main {
   @media screen and (max-width: 768px) {
     .section {
       padding: 80px 20px; } }
+  .section__loop {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    background-size: 100% auto;
+    -webkit-animation: loop 3s steps(2) infinite;
+    animation: loop 3s steps(2) infinite; }
+    .section__loop::before {
+      content: '';
+      display: block;
+      padding-bottom: 77.777777%; }
   .section:nth-of-type(1) {
     padding-top: 200px;
     margin-top: -120px;
@@ -337,16 +351,13 @@ main {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: flex-start; } }
+    .section:nth-of-type(2) .section__loop {
+      background-image: url("../images/time&money.png"); }
     .section:nth-of-type(2) > div {
       width: 50%; }
       @media screen and (max-width: 992px) {
         .section:nth-of-type(2) > div {
           width: 100%; } }
-      .section:nth-of-type(2) > div img {
-        width: 100%;
-        max-width: 492px;
-        display: block;
-        margin: auto; }
     .section:nth-of-type(2) .title {
       color: #FFFFFF;
       margin-bottom: 40px; }
@@ -466,6 +477,8 @@ main {
     .section:nth-of-type(5) .title {
       color: #003E8D;
       text-align: center; }
+    .section:nth-of-type(5) .section__loop {
+      background-image: url("../images/computer.png"); }
     .section:nth-of-type(5) .section__text {
       text-align: center;
       margin-top: 20px; }
@@ -568,6 +581,8 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .setMeal .section__loop {
+    background-image: url("../images/women.png"); }
   .setMeal > div {
     width: 50%; }
     .setMeal > div img {
@@ -583,6 +598,8 @@ main {
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
+    .setMeal:last-child .section__loop {
+      background-image: url("../images/men.png"); }
     @media screen and (max-width: 992px) {
       .setMeal:last-child {
         -webkit-box-orient: unset;
@@ -1558,3 +1575,63 @@ body {
       transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
       -webkit-animation: 2s preload-cycle-6 linear infinite both;
       animation: 2s preload-cycle-6 linear infinite both; }
+
+@-webkit-keyframes human {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0 -300%; } }
+
+@keyframes human {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0 -300%; } }
+@-webkit-keyframes loop {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0 -200%; } }
+@keyframes loop {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 0 -200%; } }
+.section {
+  position: relative; }
+  .section:nth-of-type(2) .coin {
+    background-repeat: no-repeat;
+    background-position: center; }
+    .section:nth-of-type(2) .coin:nth-of-type(1) {
+      position: absolute;
+      top: 50px;
+      left: -350px;
+      width: 190px; }
+      .section:nth-of-type(2) .coin:nth-of-type(1) div {
+        background-image: url("../images/coin-big-b.png"); }
+        .section:nth-of-type(2) .coin:nth-of-type(1) div::before {
+          content: '';
+          padding-bottom: 93.684210%;
+          display: block; }
+    .section:nth-of-type(2) .coin:nth-of-type(2) {
+      position: absolute;
+      top: 10px;
+      left: -90px;
+      width: 102px; }
+      .section:nth-of-type(2) .coin:nth-of-type(2) div {
+        background-image: url("../images/coin-small-b.png"); }
+        .section:nth-of-type(2) .coin:nth-of-type(2) div::before {
+          content: '';
+          padding-bottom: 95.098039%;
+          display: block; }
+    .section:nth-of-type(2) .coin:nth-of-type(3) {
+      position: absolute;
+      top: 150px;
+      left: -170px;
+      width: 250px; }
+      .section:nth-of-type(2) .coin:nth-of-type(3) div {
+        background-image: url("../images/coin-big-a.png"); }
+        .section:nth-of-type(2) .coin:nth-of-type(3) div::before {
+          content: '';
+          padding-bottom: 95.652173%;
+          display: block; }

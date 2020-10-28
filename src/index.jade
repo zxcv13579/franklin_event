@@ -28,11 +28,9 @@ html(lang="zh-tw")
 				img.intro__sprite(src="./assets/images/b-sprite-1.png")
 				img.intro__sprite(src="./assets/images/b-sprite-2.png")
 		picture.human
-			img(src="./assets/images/human.png")
 		main
 
 			section.section
-				
 				p.section__text
 						strong 富蘭克林 #定期定額 投資
 				p.section__text 每月
@@ -47,12 +45,18 @@ html(lang="zh-tw")
 					a 免費開戶
 					span
 					a 我要申購
-			section.section
-				h2.title 只要選對方法
+			section.section#regular
+				div.coin
+					div
+				div.coin
+					div
+				div.coin
+					div
+				h2.wow.zoomIn.title 只要選對方法
 					span 隨時都是進場時機
-				div
-					img(src="./assets/images/time&money.png")
-				div.wow.slideInUp
+				div.wow.fadeInLeft
+					div.section__loop
+				div.wow.fadeInUp(data-wow-delay="0.2s")
 					p.section__text 股市漲漲跌跌，不斷等待卻又老是錯過低點?
 						br
 						| 到底
@@ -70,10 +74,10 @@ html(lang="zh-tw")
 					div.section__btn
 						a 定期定額基金套餐
 			section.section
-				h2.title 什麼是定期定額投資?
+				h2.wow.zoomIn.title 什麼是定期定額投資?
 				br
 				br
-				p.section__text 所謂 
+				p.wow.fadeInUp.section__text 所謂 
 					strong #定期定額 
 					| 就是事先設定好要投資的基金、與每期投資金額，透過自動化轉帳代繳服務，由系統代為定期買進、分批布局，例如：每個月6號，自你指定的銀行自動轉出3,000元，用於買進某基金。
 					br
@@ -81,27 +85,27 @@ html(lang="zh-tw")
 					| 這種定期/自動的投資方式，能讓你不必再煩惱於自行研判買進時機點，同時，也因為是每個月的小額分批投資，最終還能達到分散進場風險、平均投資成本的好處。
 				br
 				br
-				h3.title__sub 連續6個月用150元買金魚，看定期定額如何加速攤平成本?
+				h3.wow.fadeInUp.title__sub(data-wow-delay="0.2s") 連續6個月用150元買金魚，看定期定額如何加速攤平成本?
 				br
 				br
-				div
+				div.wow.fadeInUp(data-wow-delay="0.3s")
 					picture
-						source(media="(max-width: 992px)" srcset="./assets/images/table-m.png")
-						img(src="./assets/images/table.png")
+						source(media="(max-width: 992px)" srcset="./assets/images/table-m.svg")
+						img(src="./assets/images/table.svg")
 				br
 				br
 				br
-				p.section__text 150元定期定額，實際購入成本：
+				p.wow.fadeInUp.section__text(data-wow-delay="0.4s") 150元定期定額，實際購入成本：
 					span 900元 / 44尾 = 
 						strong 21.5元 
 						| / 尾
-				p.section__text 6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元尾。
-			section.section
-				h2.title 定期定額就從
+				p.wow.fadeInUp.section__text(data-wow-delay="0.5s") 6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元尾。
+			section.section#meal
+				h2.wow.zoomIn.title 定期定額就從
 					br
 					| 2千元買2檔基金開始
 				br
-				p.section__text 專為
+				p.wow.fadeInUp.section__text 專為
 					strong 剛要開始投資的你
 					| 設計，讓你選擇不困難
 					br
@@ -109,73 +113,70 @@ html(lang="zh-tw")
 				br
 				br
 				div.setMeal
+					div.section__loop
 					div
-						img(src="./assets/images/women.png")
-					div
-						h4.setMeal__title 向前衝基金套餐
+						h4.wow.fadeInUp.setMeal__title(data-wow-delay="0.1s") 向前衝基金套餐
 							span 適合
 								strong 積極追求報酬
 								| 的你
 						br
-						div.setMeal__item 
+						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.2s") 
 							p.setMeal__text 全球醫療保健基金
 								span 佈局歐美亞太，追求穩健成長
-						div.setMeal__item
+						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.3s")
 							p.setMeal__text 中國A股基金
 								span 純度投資A股，深入中國內地市場
-						div.setMeal__btn
+						div.wow.flipInX.setMeal__btn(data-wow-delay="0.6s")
 							a 免費開戶
 							span
 							a 我要申購
-						p.setMeal__discount 網路定期定額
+						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
 							strong 終身0元手續費!
 				div.setMeal
+					div.section__loop
 					div
-						img(src="./assets/images/men.png")
-					div
-						h4.setMeal__title 飆速跑基金套餐
+						h4.wow.fadeInUp.setMeal__title(data-wow-delay="0.1s") 飆速跑基金套餐
 							span 適合
 								strong 積追求趨勢成長
 								| 的你
 						br
-						div.setMeal__item 
+						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.4s")
 							p.setMeal__text 富蘭克林華美高科技基金
 								span 發掘台灣新產品、新市場、新機會契機
-						div.setMeal__item
+						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.5s") 
 							p.setMeal__text 富蘭克林華美新世界股票基金
 								span 佈局全球，分享新興經濟體的高成長動能
-						div.setMeal__btn
+						div.wow.flipInX.setMeal__btn(data-wow-delay="0.8s")
 							a 免費開戶
 							span
 							a 我要申購
-						p.setMeal__discount 網路定期定額
+						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
 							strong 終身0元手續費!
-			section.section
-				h2.title 有網路就能隨時開始
-				p.section__text 只要2步驟，完成線上開戶預約，開始 
+			section.section#online
+				h2.wow.zoomIn.title 有網路就能隨時開始
+				p.wow.fadeInUp.section__text 只要2步驟，完成線上開戶預約，開始 
 					strong #定期定額 
 					| 投資囉!
 				div.step
+					div.section__loop
 					div
-						img(src="./assets/images/computer.png")
-					div
-						div.step__item
+						div.wow.fadeInUp.step__item(data-wow-delay="0.2s")
 							h3.step__title 線上開戶填表5分鐘
 							p 資料填寫包括個資、聯絡方式等，方便讓我們將投資與紅利回饋登記在你的名下。
-						div.step__item
+						div.wow.fadeInUp.step__item(data-wow-delay="0.3s")
 							h3.step__title 約定銀行自動轉帳授權
 							p 請填寫一組常用的銀行帳號，授權投資款自動匯入或轉出，不必出門臨櫃辦理哦。
-					div.step__btn
+					div.wow.flipInX.step__btn(data-wow-delay="0.5s")
 						a 線上開戶 送紅利3000點
-				p.section__text.highlight 最超值的
+				p.wow.fadeInUp.section__text.highlight(data-wow-delay="0.6s") 最超值的
 					strong 手續費0元
 					| 優惠
 					span 只到2020/12/31止
 					span
-			section.section
-				h2.title 投資找阿富！
+			section.section#investment
+				h2.wow.zoomIn.title 投資找阿富！
 					span 網路理財的好夥伴
-				p.section__text 投資找阿富！網路理財的好夥伴。
+				p.wow.fadeInUp.section__text 投資找阿富！網路理財的好夥伴。
 					br
 					br
 					| 富蘭克林華美投信2002年成立於台北，陸續在台中、高雄、新竹、台南皆有設立分公司，以在地菁英團隊，為台灣的投資大眾提供具全球視野的投資服務，為美國「富蘭克林坦伯頓基金集團」在台投資企業。
@@ -189,7 +190,7 @@ html(lang="zh-tw")
 						strong 線上留言
 					| 與我們聯絡。
 				img(src="./assets/images/protagonist.png")
-			section.section
+			section.section#discount
 				h2.title 優惠方案說明
 				br
 				br
@@ -284,6 +285,11 @@ html(lang="zh-tw")
 
 
 script(src="./assets/scripts/TweenMax.min.js")
+
+script(src="./assets/scripts/ScrollMagic.min.js")
+script(src="./assets/scripts/animation.gsap.min.js")
+script(src="./assets/scripts/debug.addIndicators.min.js")
+
 script(src="./assets/scripts/wow.min.js")
 script(src="./assets/scripts/jquery.min.js")
 script(src="./assets/scripts/typeWriter.js")

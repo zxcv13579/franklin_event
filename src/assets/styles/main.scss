@@ -35,6 +35,10 @@ body {
 	// }
 }
 
+// .wow {
+// 	overflow: hidden;
+// }
+
 
 .header {
 	display: flex;
@@ -169,9 +173,17 @@ body {
 	display: block;
 	margin: auto;
     transform: translateY(120px);
+    background-image: url('../images/human.png');
+	animation: human 3s steps(3) infinite;
+    background-size: 100% auto;
     // margin-top: -350px;
-	img {
-		width: 100%;
+	// img {
+	// 	width: 100%;
+	// }
+	&::before {
+		content: '';
+		padding-bottom: 83.842794%;
+		display: block;
 	}
 	@media screen and (max-width: $breakpoint-lg) {
 		transform: translateY(50px);
@@ -235,7 +247,7 @@ strong {
 
 
 main {
-	opacity: 0;
+	// opacity: 0;
 }
 
 
@@ -251,6 +263,18 @@ main {
 	@media screen and (max-width: $breakpoint-md) {
 		padding: 80px 20px;
 	}
+	&__loop {
+		position: relative;
+		width: 100%;
+		max-width: 450px;
+		background-size: 100% auto;
+		animation: loop 3s steps(2) infinite;
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 77.777777%;
+		}
+	}
 	&:nth-of-type(1) {
 		padding-top: 200px;
 		margin-top: -120px;
@@ -258,6 +282,7 @@ main {
 		border-radius: 20px 20px 0 0;
 		border-top: 8px solid #004093;
 		background: linear-gradient(178.17deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%);
+		
 		#{$this}__text {
 			text-align: center;
 			color: #081E6A;			
@@ -334,20 +359,24 @@ main {
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+
 		@media screen and (max-width: $breakpoint-lg) {
 			justify-content: flex-start;
+		}
+		#{$this}__loop {
+			background-image: url('../images/time&money.png')
 		}
 		> div {
 			width: 50%;
 			@media screen and (max-width: $breakpoint-lg) {
 				width: 100%;
 			}
-			img {
-				width: 100%;
-				max-width: 492px;
-				display: block;
-				margin: auto;
-			}
+			// img {
+			// 	width: 100%;
+			// 	max-width: 492px;
+			// 	display: block;
+			// 	margin: auto;
+			// }
 		}
 		.title {
 			color: #FFFFFF;
@@ -485,6 +514,9 @@ main {
 			color: #003E8D;
 			text-align: center;
 		}
+		#{$this}__loop {
+			background-image: url('../images/computer.png')
+		}
 		#{$this}__text {
 			text-align: center;
 			margin-top: 20px;
@@ -605,6 +637,9 @@ main {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	.section__loop {
+		background-image: url('../images/women.png')
+	}
 	> div {
 		width: 50%;
 		img {
@@ -619,10 +654,14 @@ main {
 	}
 	&:last-child {
 		margin-top: 60px;
-		flex-direction: row-reverse;
+		flex-direction: row-reverse;		
+		.section__loop {
+			background-image: url('../images/men.png')
+		}
 		@media screen and (max-width: $breakpoint-lg) {
 			flex-direction: unset;
 		}
+
 	}
 	&__title {
 		font-weight: bold;
@@ -1178,4 +1217,84 @@ body{
   }
  }
 
+}
+
+@keyframes human {
+	from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -300%;
+    }
+
+}
+
+@keyframes loop {
+	from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -200%;
+    }
+}
+
+
+
+.section {
+	$this: &;
+	position: relative;
+	&:nth-of-type(2) {
+		.coin {
+			background-repeat: no-repeat;
+			background-position: center;
+			&:nth-of-type(1) {
+				position: absolute;
+				top: 50px;
+				left: -350px;
+				width: 190px;
+				div {
+					background-image: url('../images/coin-big-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 93.684210%;
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				position: absolute;
+				top: 10px;
+				left: -90px;
+				width: 102px;
+				div {
+					background-image: url('../images/coin-small-b.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.098039%;
+						display: block;
+					}
+
+				}
+			}
+			&:nth-of-type(3) {
+				position: absolute;
+				top: 150px;
+				left: -170px;
+				width: 250px;
+				div {
+					background-image: url('../images/coin-big-a.png');
+					&::before {
+						content: '';
+						padding-bottom: 95.652173%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&:nth-of-type(1) {}
+	&:nth-of-type(1) {}
+	&:nth-of-type(1) {}
+	&:nth-of-type(1) {}
+	&:nth-of-type(1) {}
 }
