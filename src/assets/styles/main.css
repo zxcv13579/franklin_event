@@ -61,14 +61,14 @@ body, html {
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  background-image: url("../images/mask.png");
-  background-size: 100% auto;
-  background-position: center top;
+  background-image: url("../images/mask.png"), url("../images/bg.jpg");
+  background-size: 100% auto, contain;
+  background-position: center top, center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
   @media screen and (max-width: 768px) {
     body {
-      background-image: url("../images/mask-m.png"); } }
+      background-image: url("../images/mask-m.png"), url("../images/bg-m.jpg"); } }
 
 .header {
   display: flex;
@@ -175,7 +175,7 @@ body {
   @media screen and (max-width: 992px) {
     .human {
       transform: translateY(50px);
-      max-width: 320px; } }
+      max-width: 300px; } }
 
 main {
   width: 100%;
@@ -391,25 +391,25 @@ strong {
     .section:nth-of-type(3) .section__text {
       color: #222; }
       .section:nth-of-type(3) .section__text:nth-last-child(2) {
-        color: #003E8D; }
+        color: #003E8D;
+        position: relative; }
         .section:nth-of-type(3) .section__text:nth-last-child(2) strong {
           font-size: 36px;
           line-height: 52px; }
         .section:nth-of-type(3) .section__text:nth-last-child(2) span {
-          position: relative;
-          white-space: pre; }
-          .section:nth-of-type(3) .section__text:nth-last-child(2) span:after {
-            content: url("../images/win.png");
-            display: inline-block;
-            position: absolute;
-            bottom: 0;
-            right: -90px; }
+          position: relative; }
           @media screen and (max-width: 768px) {
             .section:nth-of-type(3) .section__text:nth-last-child(2) span {
-              display: block; }
-              .section:nth-of-type(3) .section__text:nth-last-child(2) span:after {
-                right: 0px;
-                bottom: 15px; } }
+              display: block;
+              margin-top: 20px; } }
+        .section:nth-of-type(3) .section__text:nth-last-child(2) img {
+          width: 80px; }
+          @media screen and (max-width: 768px) {
+            .section:nth-of-type(3) .section__text:nth-last-child(2) img {
+              width: 50px;
+              position: absolute;
+              bottom: 40px;
+              right: 0px; } }
       .section:nth-of-type(3) .section__text:nth-last-child(1) {
         color: #000; }
       @media screen and (max-width: 992px) {
@@ -825,12 +825,18 @@ strong {
 .fixed {
   position: fixed;
   bottom: 50px;
-  right: -260px; }
+  right: -260px;
+  transition: all .5s; }
   @media screen and (max-width: 992px) {
     .fixed {
       bottom: 0px;
       left: 0;
-      right: 0px; } }
+      right: 0px;
+      transform: translateY(100%); } }
+  @media screen and (max-width: 992px) and (max-width: 992px) {
+    .fixed--animate {
+      transform: translateY(0%); } }
+
   .fixed__container {
     display: flex;
     flex-wrap: wrap;
@@ -854,6 +860,9 @@ strong {
     color: #FFF;
     transition: all .5s;
     cursor: pointer; }
+    @media screen and (max-width: 992px) {
+      .fixed__item {
+        justify-content: center; } }
     .fixed__item:nth-of-type(1) {
       background-color: #EA5504; }
       @media screen and (max-width: 992px) {
@@ -1142,7 +1151,10 @@ strong {
   width: 100%;
   height: 100vh;
   background-color: #024095;
-  z-index: 9999999; }
+  z-index: 9999999;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center; }
 
 .preloader {
   position: absolute;

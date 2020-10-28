@@ -26,14 +26,14 @@ body {
 	overflow-y: hidden;
     // overflow: hidden;
 	// margin-top: 450px;
-	background-image: url('../images/mask.png');
-	background-size: 100% auto;
-	background-position: center top;
+	background-image: url('../images/mask.png'), url('../images/bg.jpg');
+	background-size: 100% auto, contain;
+	background-position: center top, center;
 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	@media screen and (max-width: $breakpoint-md) {
-		background-image: url('../images/mask-m.png');
+		background-image: url('../images/mask-m.png'), url('../images/bg-m.jpg');
 	}
 }
 
@@ -190,7 +190,7 @@ body {
 	}
 	@media screen and (max-width: $breakpoint-lg) {
 		transform: translateY(50px);
-		max-width: 320px;
+		max-width: 300px;
 
 	}
 
@@ -478,28 +478,48 @@ main {
 			color: #222;
 			&:nth-last-child(2) {
 				color: #003E8D;
+				position: relative;
 				strong {
 					font-size: 36px;
 					line-height: 52px;
 				}
 				span {
 					position: relative;
-					white-space: pre;
-					&:after {
-						content: url('../images/win.png');
-						display: inline-block;
-						position: absolute;
-						bottom: 0;
-					    right: -90px;
-					}
+					// &:after {
+					// 	content: '';
+					// 	width: 28px;
+					// 	background-image: url('../images/win.png');
+					// 	background-position: center;
+					// 	background-repeat: no-repeat;
+					// 	background-size: cover;
+					// 	display: inline-block;
+					// 	position: absolute;
+					// 	bottom: 0;
+					//     right: -90px;
+					// }
 					@media screen and (max-width: $breakpoint-md) {
 						display: block;
-						&:after {
-							right: 0px;
-							bottom: 15px;
-						}
+						margin-top: 20px;	
+						// &:after {
+						// 	right: 0px;
+						// 	bottom: 15px;
+						// }
 					}
-				}				
+				}
+				img {
+					width: 80px;
+					@media screen and (max-width: $breakpoint-md) {
+						width: 50px;
+						position: absolute;
+						bottom: 40px;
+					    right: 0px;
+					}
+					// display: inline-block;
+					// position: absolute;
+					// bottom: 0;
+				 //    right: -90px;
+
+				}
 			}
 			&:nth-last-child(1) {
 				color: #000;
@@ -1029,10 +1049,19 @@ main {
 	position: fixed;
 	bottom: 50px;
     right: -260px;
+	transition: all .5s;
+
     @media screen and (max-width: $breakpoint-lg) {
 		bottom: 0px;
 		left: 0;
 	    right: 0px;
+		transform: translateY(100%);
+	    &--animate {
+			@media screen and (max-width: $breakpoint-lg) {
+				transform: translateY(0%);
+			}
+		}
+
 	}
 	&__container {
 		display: flex;
@@ -1058,6 +1087,9 @@ main {
     	color: #FFF;
 		transition: all .5s;
 		cursor: pointer;
+		@media screen and (max-width: $breakpoint-lg) {
+		    justify-content: center;
+		}
     	&:nth-of-type(1) {
     		background-color: #EA5504;
     		@media screen and (max-width: $breakpoint-lg) {
@@ -1203,6 +1235,9 @@ main {
 	height: 100vh;
 	background-color: #024095;
 	z-index: 9999999;
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+	background-position: center;
 }
 
 .preloader{

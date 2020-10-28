@@ -31,6 +31,14 @@
 	})
 
 
+	$(window).on('scroll', function() {
+		if($(this).scrollTop() > $('section').eq(0).innerHeight() / 2) {
+			$('.fixed').addClass('fixed--animate')
+		} else {
+			$('.fixed').removeClass('fixed--animate')
+		}
+	})
+
 
 	var tl = new TimelineMax({paused: true});
 
@@ -48,7 +56,7 @@
 
 		
 		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 2})
-		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.3, alpha: 1})
+		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
 		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 2})
 		.add([
 			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
