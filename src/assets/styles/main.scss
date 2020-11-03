@@ -899,6 +899,8 @@ main {
 		// }
 	}
 	&__discount {
+		width: 100%;
+		max-width: 420px; 
 		font-size: 18px;
 		line-height: 26px;
 		color: #F5771A;
