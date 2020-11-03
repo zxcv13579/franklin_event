@@ -111,8 +111,8 @@ body {
         background-image: url("../images/mask-m.png"); } }
 
 .loop::after {
-  -webkit-animation: circle 5s linear 2 alternate;
-  animation: circle 5s linear 2 alternate; }
+  -webkit-animation: circle 5s linear alternate infinite;
+  animation: circle 5s linear alternate infinite; }
 
 .header {
   display: -webkit-box;
@@ -210,6 +210,8 @@ body {
     font-weight: 500;
     font-size: 18px;
     line-height: 26px; }
+    .nav__item:hover a {
+      color: #ea5404; }
     .nav__item a {
       display: block;
       position: relative;
@@ -328,8 +330,8 @@ strong {
     width: 100%;
     max-width: 450px;
     background-size: 100% auto;
-    -webkit-animation: loop 3s steps(2) infinite;
-    animation: loop 3s steps(2) infinite; }
+    -webkit-animation: loop 2s steps(2) infinite;
+    animation: loop 2s steps(2) infinite; }
     .section__loop::before {
       content: '';
       display: block;
@@ -383,6 +385,7 @@ strong {
       -ms-flex-align: center;
       align-items: center; }
       .section:nth-of-type(1) .section__btn a {
+        position: relative;
         width: 49.9%;
         font-size: 28px;
         line-height: 41px;
@@ -390,23 +393,60 @@ strong {
         letter-spacing: 0.1em;
         color: #FFFFFF;
         cursor: pointer;
-        padding: 20px 0px; }
+        padding: 20px 0px;
+        overflow: hidden; }
+        .section:nth-of-type(1) .section__btn a:first-child::before {
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px; }
+        .section:nth-of-type(1) .section__btn a:first-child::after {
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px; }
         .section:nth-of-type(1) .section__btn a:last-child::before {
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px; }
+        .section:nth-of-type(1) .section__btn a:last-child::after {
+          border-top-right-radius: 25px;
+          border-bottom-right-radius: 25px; }
+        .section:nth-of-type(1) .section__btn a::before, .section:nth-of-type(1) .section__btn a::after {
           content: '';
-          width: 1px;
-          height: 36px;
           position: absolute;
-          top: 50%;
-          left: 0;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          background-color: #FFF;
-          display: block; }
+          top: 0;
+          left: -1px;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.25);
+          -webkit-transition: -webkit-transform 0.3s;
+          transition: -webkit-transform 0.3s;
+          -o-transition: transform 0.3s;
+          transition: transform 0.3s;
+          transition: transform 0.3s, -webkit-transform 0.3s;
+          -webkit-transform: translate(-100%, 0);
+          -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+          -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+          -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+          transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+        .section:nth-of-type(1) .section__btn a::after {
+          -webkit-transition-delay: 0.2s;
+          -o-transition-delay: 0.2s;
+          transition-delay: 0.2s; }
+        .section:nth-of-type(1) .section__btn a span {
+          z-index: 3;
+          position: relative; }
         @media screen and (max-width: 992px) {
           .section:nth-of-type(1) .section__btn a {
             font-size: 18px;
             line-height: 26px; } }
+      .section:nth-of-type(1) .section__btn .end::before, .section:nth-of-type(1) .section__btn .end::after {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0); }
+      .section:nth-of-type(1) .section__btn > span {
+        width: 1px;
+        height: 36px;
+        display: block;
+        background-color: #FFF; }
       @media screen and (max-width: 992px) {
         .section:nth-of-type(1) .section__btn {
           padding: 8px 0px;
@@ -466,6 +506,8 @@ strong {
           font-size: 14px;
           line-height: 20px; } }
     .section:nth-of-type(2) .section__btn {
+      position: relative;
+      overflow: hidden;
       margin-top: 25px;
       width: 100%;
       max-width: 500px;
@@ -484,7 +526,34 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      .section:nth-of-type(2) .section__btn::before, .section:nth-of-type(2) .section__btn::after {
+        content: '';
+        border-radius: 25px;
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.25);
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        -o-transition: transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s;
+        -webkit-transform: translate(-100%, 0);
+        -ms-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+      .section:nth-of-type(2) .section__btn::after {
+        -webkit-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
       .section:nth-of-type(2) .section__btn a {
+        position: relative;
+        z-index: 3;
         font-weight: bold;
         font-size: 28px;
         line-height: 41px;
@@ -503,6 +572,10 @@ strong {
       @media screen and (max-width: 992px) {
         .section:nth-of-type(2) .section__btn {
           padding: 6px 0px; } }
+    .section:nth-of-type(2) .end::before, .section:nth-of-type(2) .end::after {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
   .section:nth-of-type(3) {
     background: -webkit-linear-gradient(271.83deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%);
     background: -o-linear-gradient(271.83deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%);
@@ -758,31 +831,68 @@ strong {
     .setMeal__btn a {
       position: relative;
       display: block;
-      width: 48.9%;
+      width: 49.9%;
       font-size: 28px;
       line-height: 41px;
       text-align: center;
       letter-spacing: 0.1em;
       padding: 15px 0px;
       color: #FFFFFF;
-      cursor: pointer; }
+      cursor: pointer;
+      overflow: hidden; }
+      .setMeal__btn a:first-child::before {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px; }
+      .setMeal__btn a:first-child::after {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px; }
       .setMeal__btn a:last-child::before {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px; }
+      .setMeal__btn a:last-child::after {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px; }
+      .setMeal__btn a::before, .setMeal__btn a::after {
         content: '';
-        width: 1px;
-        height: 36px;
         position: absolute;
-        top: 50%;
-        left: 0;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        background-color: #FFF;
-        display: block; }
+        top: 0;
+        left: -1px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.25);
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        -o-transition: transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s;
+        -webkit-transform: translate(-100%, 0);
+        -ms-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+      .setMeal__btn a::after {
+        -webkit-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
+      .setMeal__btn a span {
+        z-index: 3;
+        position: relative; }
       @media screen and (max-width: 992px) {
         .setMeal__btn a {
           font-size: 18px;
           line-height: 26px;
           padding: 6px 0px; } }
+    .setMeal__btn .end::before, .setMeal__btn .end::after {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
+    .setMeal__btn > span {
+      width: 1px;
+      height: 36px;
+      display: block;
+      background-color: #FFF; }
     @media screen and (max-width: 992px) {
       .setMeal__btn {
         padding: 6px 0px; } }
@@ -872,8 +982,36 @@ strong {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    position: relative;
+    overflow: hidden; }
+    .step__btn::before, .step__btn::after {
+      content: '';
+      border-radius: 25px;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.25);
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: -webkit-transform 0.3s;
+      -o-transition: transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s;
+      -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+      transform: translate(-100%, 0);
+      -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+    .step__btn::after {
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      transition-delay: 0.2s; }
     .step__btn a {
+      z-index: 3;
       font-size: 28px;
       line-height: 41px;
       text-align: center;
@@ -887,6 +1025,10 @@ strong {
     @media screen and (max-width: 992px) {
       .step__btn {
         padding: 6px 0px; } }
+  .step .end::before, .step .end::after {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0); }
 
 .footer {
   width: 100%;

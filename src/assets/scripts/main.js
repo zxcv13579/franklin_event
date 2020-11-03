@@ -11,6 +11,12 @@
 	    
 	});
 
+	$('.section a, #goToMeal, .setMeal a, .step__btn').on('mouseenter', function(e) {
+		if($(this).hasClass('endd')) return;
+		$(this).addClass('end')
+
+	})
+
 
 	$('.nav__item a').on('click', function(e) {
 		$(".nav").toggleClass("nav--active");
@@ -55,7 +61,7 @@
 		
 		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 2})
 		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
-		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 2})
+		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
 		.add([
 			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
 			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
