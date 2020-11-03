@@ -290,7 +290,8 @@ strong {
       display: block;
       padding-bottom: 77.777777%; }
   .section__btn {
-    cursor: pointer; }
+    cursor: pointer;
+    overflow: hidden; }
   .section:nth-of-type(1) {
     padding-top: 200px;
     margin-top: -120px;
@@ -373,11 +374,11 @@ strong {
           transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
         .section:nth-of-type(1) .section__btn a::after {
           transition-delay: 0.2s; }
+        .section:nth-of-type(1) .section__btn a:hover::before, .section:nth-of-type(1) .section__btn a:hover::after {
+          transform: translate(0, 0); }
         .section:nth-of-type(1) .section__btn a span {
           z-index: 3;
           position: relative; }
-      .section:nth-of-type(1) .section__btn .end::before, .section:nth-of-type(1) .section__btn .end::after {
-        transform: translate(0, 0); }
       .section:nth-of-type(1) .section__btn > span {
         width: 1px;
         display: block;
@@ -461,6 +462,8 @@ strong {
         transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
       .section:nth-of-type(2) .section__btn::after {
         transition-delay: 0.2s; }
+      .section:nth-of-type(2) .section__btn:hover::before, .section:nth-of-type(2) .section__btn:hover::after {
+        transform: translate(0, 0); }
       .section:nth-of-type(2) .section__btn a {
         position: relative;
         z-index: 3;
@@ -482,8 +485,6 @@ strong {
       @media screen and (max-width: 992px) {
         .section:nth-of-type(2) .section__btn {
           padding: 6px 0px; } }
-    .section:nth-of-type(2) .end::before, .section:nth-of-type(2) .end::after {
-      transform: translate(0, 0); }
   .section:nth-of-type(3) {
     background: linear-gradient(178.17deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%); }
     .section:nth-of-type(3) .title {
@@ -758,11 +759,11 @@ strong {
         transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
       .setMeal__btn a::after {
         transition-delay: 0.2s; }
+      .setMeal__btn a:hover::before, .setMeal__btn a:hover::after {
+        transform: translate(0, 0); }
       .setMeal__btn a span {
         z-index: 3;
         position: relative; }
-    .setMeal__btn .end::before, .setMeal__btn .end::after {
-      transform: translate(0, 0); }
     .setMeal__btn > span {
       width: 1px;
       height: 36px;
@@ -857,6 +858,8 @@ strong {
       transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
     .step__btn::after {
       transition-delay: 0.2s; }
+    .step__btn:hover::before, .step__btn:hover::after {
+      transform: translate(0, 0); }
     .step__btn a {
       z-index: 3;
       font-size: 28px;
@@ -873,8 +876,6 @@ strong {
       .step__btn {
         padding: 12px 0px;
         border-radius: 15px; } }
-  .step .end::before, .step .end::after {
-    transform: translate(0, 0); }
 
 .footer {
   width: 100%;
@@ -1046,8 +1047,9 @@ strong {
         .fixed__item:nth-of-type(3) {
           width: 100%;
           justify-content: center; } }
-    .fixed__item:hover {
-      transform: translateX(calc(-100% + 60px)); }
+    @media screen and (min-width: 992px) {
+      .fixed__item:hover {
+        transform: translateX(calc(-100% + 60px)); } }
   .fixed__icon {
     width: 28px;
     height: 28px;

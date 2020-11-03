@@ -356,6 +356,7 @@ main {
 	}
 	&__btn {
 		cursor: pointer;
+		overflow: hidden;
 	}
 	&:nth-of-type(1) {
 		padding-top: 200px;
@@ -463,17 +464,18 @@ main {
 				&::after {
 					transition-delay: 0.2s;
 				}
+				&:hover {
+					&::before,
+					&::after {
+						transform: translate(0,0);
+					}
+				}
 				span {
 					z-index: 3;
 					position: relative;
 				}
 			}
-			.end {
-				&::before,
-				&::after {
-					transform: translate(0,0);
-				}
-			}
+			
 			> span {
 				width: 1px;
 				display: block;
@@ -585,6 +587,12 @@ main {
 				transition-delay: 0.2s;
 			}
 
+			&:hover {
+				&::before,
+				&::after {
+					transform: translate(0,0);
+				}
+			}
 
 			a {
 				position: relative;
@@ -611,12 +619,7 @@ main {
 				padding: 6px 0px;
 			}
 		}
-		.end {
-			&::before,
-			&::after {
-				transform: translate(0,0);
-			}
-		}
+		
 	}
 	&:nth-of-type(3) {
 		background: linear-gradient(178.17deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%);
@@ -985,22 +988,16 @@ main {
 			&::after {
 				transition-delay: 0.2s;
 			}
-			// &:hover {
-			// 	&::before,
-			// 	&::after {
-			// 		transform: translate(0,0);
-			// 	}
-			// }
+			&:hover {
+				&::before,
+				&::after {
+					transform: translate(0,0);
+				}
+			}
 			
 			span {
 				z-index: 3;
 				position: relative;
-			}
-		}
-		.end {
-			&::before,
-			&::after {
-				transform: translate(0,0);
 			}
 		}
 		> span {
@@ -1125,12 +1122,12 @@ main {
 		&::after {
 			transition-delay: 0.2s;
 		}
-		// &:hover {
-		// 	&::before,
-		// 	&::after {
-		// 		transform: translate(0,0);
-		// 	}
-		// }
+		&:hover {
+			&::before,
+			&::after {
+				transform: translate(0,0);
+			}
+		}
 		a {
 			// width: 49.9%;
 			z-index: 3;
@@ -1148,12 +1145,6 @@ main {
 		@media screen and (max-width: $breakpoint-lg) {
 			padding: 12px 0px;
 			border-radius: 15px;
-		}
-	}
-	.end {
-		&::before,
-		&::after {
-			transform: translate(0,0);
 		}
 	}
 }
@@ -1362,8 +1353,10 @@ main {
 			    justify-content: center;
     		}
     	}
-    	&:hover {
-    		transform: translateX( calc(-100% + 60px))
+    	@media screen and (min-width: $breakpoint-lg) {
+	    	&:hover {
+	    		transform: translateX( calc(-100% + 60px))
+	    	}
     	}
 
 	}
