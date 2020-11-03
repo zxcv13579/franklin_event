@@ -478,6 +478,7 @@ main {
 			
 			> span {
 				width: 1px;
+				height: 36px;
 				display: block;
 				background-color: #FFF;
 				@media screen and (max-width: $breakpoint-lg) {
