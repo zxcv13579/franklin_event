@@ -11,11 +11,6 @@
 	    
 	});
 
-	$('.section a, #goToMeal, .setMeal a, .step__btn').on('mouseenter', function(e) {
-		if($(this).hasClass('endd')) return;
-		$(this).addClass('end')
-
-	})
 
 
 	$('.nav__item a').on('click', function(e) {
