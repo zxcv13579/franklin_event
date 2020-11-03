@@ -1,6 +1,11 @@
 (function(){
 	new WOW().init();
 
+	$.ripple('#front .section__btn a, #goToMeal, .setMeal .setMeal__btn a', {
+		on: 'mouseenter',
+		color: '#FFF',
+		multi: true
+	})
 
 
 	$(".header__hamburger").on('click', function(event) {

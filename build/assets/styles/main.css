@@ -334,6 +334,8 @@ strong {
       content: '';
       display: block;
       padding-bottom: 77.777777%; }
+  .section__btn {
+    cursor: pointer; }
   .section:nth-of-type(1) {
     padding-top: 200px;
     margin-top: -120px;
@@ -371,7 +373,6 @@ strong {
       -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
       box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
       border-radius: 25px;
-      padding: 20px 0px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -388,16 +389,24 @@ strong {
         text-align: center;
         letter-spacing: 0.1em;
         color: #FFFFFF;
-        cursor: pointer; }
+        cursor: pointer;
+        padding: 20px 0px; }
+        .section:nth-of-type(1) .section__btn a:last-child::before {
+          content: '';
+          width: 1px;
+          height: 36px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          background-color: #FFF;
+          display: block; }
         @media screen and (max-width: 992px) {
           .section:nth-of-type(1) .section__btn a {
             font-size: 18px;
             line-height: 26px; } }
-      .section:nth-of-type(1) .section__btn span {
-        width: 1px;
-        height: 36px;
-        display: block;
-        background-color: #FFF; }
       @media screen and (max-width: 992px) {
         .section:nth-of-type(1) .section__btn {
           padding: 8px 0px;
@@ -737,7 +746,6 @@ strong {
     -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    padding: 15px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -748,24 +756,33 @@ strong {
     -ms-flex-align: center;
     align-items: center; }
     .setMeal__btn a {
+      position: relative;
       display: block;
       width: 48.9%;
       font-size: 28px;
       line-height: 41px;
       text-align: center;
       letter-spacing: 0.1em;
+      padding: 15px 0px;
       color: #FFFFFF;
       cursor: pointer; }
+      .setMeal__btn a:last-child::before {
+        content: '';
+        width: 1px;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: #FFF;
+        display: block; }
       @media screen and (max-width: 992px) {
         .setMeal__btn a {
           font-size: 18px;
           line-height: 26px;
           padding: 6px 0px; } }
-    .setMeal__btn span {
-      width: 1px;
-      height: 36px;
-      display: block;
-      background-color: #FFF; }
     @media screen and (max-width: 992px) {
       .setMeal__btn {
         padding: 6px 0px; } }
