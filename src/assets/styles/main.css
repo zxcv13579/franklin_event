@@ -55,20 +55,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 body, html {
   position: relative;
-  font-family: 'Noto Sans TC', '微軟正黑體';
-  background-color: #00378E; }
+  font-family: 'Noto Sans TC', '微軟正黑體'; }
 
+@keyframes circle {
+  from {
+    transform: scale(1.15) rotate(-2deg); }
+  to {
+    transform: scale(1.15) rotate(2deg); } }
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
-  background-image: url("../images/mask.png"), url("../images/bg.jpg");
-  background-size: 100% auto, contain;
-  background-position: center top, center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
-  @media screen and (max-width: 768px) {
-    body {
-      background-image: url("../images/mask-m.png"), url("../images/bg-m.jpg"); } }
+  overflow-y: hidden; }
+  body::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 768px) {
+      body::before {
+        background-image: url("../images/bg-m.jpg"); } }
+  body::after {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("../images/mask.png");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform: scale(1.15) rotate(-2deg);
+    z-index: -1; }
+    @media screen and (max-width: 768px) {
+      body::after {
+        background-image: url("../images/mask-m.png"); } }
+
+.loop::after {
+  animation: circle 5s linear 2 alternate; }
 
 .header {
   display: flex;
@@ -166,7 +196,7 @@ body {
   margin: auto;
   transform: translateY(120px);
   background-image: url("../images/human.png");
-  animation: human 3s steps(3) infinite;
+  animation: human 1.5s steps(3) infinite;
   background-size: 100% auto; }
   .human::before {
     content: '';
@@ -187,6 +217,9 @@ main {
 
 strong {
   font-weight: bold !important; }
+  strong span {
+    font-size: 1.25em;
+    color: red; }
 
 .highlight {
   color: #E84C0B !important;
@@ -206,16 +239,16 @@ strong {
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 600px; }
-    .intro > div img {
-      width: 100%;
-      opacity: 0; }
     @media screen and (max-width: 992px) {
       .intro > div {
         max-width: 320px; } }
     .intro > div:nth-of-type(1) .intro__loop {
-      background-image: url("../images/a-sprite.png"); }
+      background-image: url("../images/a.png"); }
     .intro > div:nth-of-type(2) .intro__loop {
-      background-image: url("../images/b-sprite.png"); }
+      background-image: url("../images/b.png"); }
+    @media screen and (max-width: 992px) {
+      .intro > div {
+        max-width: 320px; } }
   .intro__loop {
     opacity: 0;
     width: 100%;
@@ -243,7 +276,7 @@ strong {
   border-right: 8px solid #0161DD; }
   @media screen and (max-width: 768px) {
     .section {
-      padding: 80px 20px; } }
+      padding: 50px 20px; } }
   .section__loop {
     position: relative;
     width: 100%;
@@ -275,6 +308,11 @@ strong {
             content: ''; }
           .section:nth-of-type(1) .section__text:nth-of-type(2) span::after {
             content: ''; } }
+      .section:nth-of-type(1) .section__text:nth-of-type(3) > span {
+        display: none; }
+        @media screen and (min-width: breakpoint-lg) {
+          .section:nth-of-type(1) .section__text:nth-of-type(3) > span {
+            display: block; } }
     .section:nth-of-type(1) .section__btn {
       width: 100%;
       max-width: 500px;
@@ -311,6 +349,9 @@ strong {
     @media screen and (max-width: 992px) {
       .section:nth-of-type(1) {
         margin-top: -150px; } }
+    @media screen and (max-width: 992px) {
+      .section:nth-of-type(1) strong span {
+        display: block; } }
   .section__text {
     font-size: 18px;
     line-height: 26px;
@@ -453,19 +494,19 @@ strong {
       .section:nth-of-type(5) .section__text:last-child {
         text-align: center; }
       @media screen and (max-width: 576px) {
-        .section:nth-of-type(5) .section__text span:nth-of-type(1) {
+        .section:nth-of-type(5) .section__text > span:nth-of-type(1) {
           display: block; } }
-      .section:nth-of-type(5) .section__text span:nth-of-type(1)::after {
+      .section:nth-of-type(5) .section__text > span:nth-of-type(1)::after {
         content: '，'; }
         @media screen and (max-width: 992px) {
-          .section:nth-of-type(5) .section__text span:nth-of-type(1)::after {
+          .section:nth-of-type(5) .section__text > span:nth-of-type(1)::after {
             content: '，現在就透過線上開戶'; } }
-      .section:nth-of-type(5) .section__text span:nth-of-type(2) {
+      .section:nth-of-type(5) .section__text > span:nth-of-type(2) {
         display: block; }
-        .section:nth-of-type(5) .section__text span:nth-of-type(2)::after {
+        .section:nth-of-type(5) .section__text > span:nth-of-type(2)::after {
           content: '現在就透過線上開戶，和大家一起加入投資吧！'; }
           @media screen and (max-width: 992px) {
-            .section:nth-of-type(5) .section__text span:nth-of-type(2)::after {
+            .section:nth-of-type(5) .section__text > span:nth-of-type(2)::after {
               content: '和大家一起加入投資吧！'; } }
   .section:nth-of-type(6) {
     position: relative;
@@ -602,14 +643,17 @@ strong {
     cursor: pointer;
     width: 100%;
     max-width: 420px;
-    margin-top: 25px; }
+    margin-top: 25px;
+    background: #14378A;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .setMeal__btn a {
       display: block;
-      width: 100%;
-      background: #14378A;
-      box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
-      border-radius: 25px;
-      padding: 15px 0px;
+      width: 48.9%;
       font-size: 28px;
       line-height: 41px;
       text-align: center;
@@ -621,12 +665,14 @@ strong {
           font-size: 18px;
           line-height: 26px;
           padding: 6px 0px; } }
+    .setMeal__btn span {
+      width: 1px;
+      height: 36px;
+      display: block;
+      background-color: #FFF; }
     @media screen and (max-width: 992px) {
       .setMeal__btn {
         padding: 6px 0px; } }
-    @media screen and (max-width: 992px) {
-      .setMeal__btn span {
-        display: block; } }
   .setMeal__discount {
     font-size: 18px;
     line-height: 26px;
@@ -721,7 +767,7 @@ strong {
       width: 90%; } }
   @media screen and (max-width: 768px) {
     .footer {
-      padding: 80px 20px; } }
+      padding: 50px 20px; } }
   .footer__info {
     width: 100%;
     display: flex;

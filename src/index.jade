@@ -18,19 +18,19 @@ html(lang="zh-tw")
 				span.slice
 				span.slice
 				span.slice
-		div.intro 
+		div.intro
 			div.intro__a
-				img(src="./assets/images/a.png")
+				//- img(src="./assets/images/a.png")
 				div.intro__loop
 			div.intro__b
-				img(src="./assets/images/b.png")
+				//- img(src="./assets/images/b.png")
 				div.intro__loop
 		picture.human
 		main
 
 			section.section
 				p.section__text
-						strong 富蘭克林 #定期定額 投資
+						strong 富蘭克林華美 #定期定額 投資
 				p.section__text 每月
 					strong 2,000
 					| 元起就能開始
@@ -38,7 +38,10 @@ html(lang="zh-tw")
 					| 不必擔心一次買在最高點!
 				br
 				br
-				p.section__text.highlight 新朋友線上開戶，送紅利3,000點
+				p.section__text.highlight 新朋友線上開戶
+					span ，
+					strong 
+						span 送紅利3,000點
 				div.section__btn
 					a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 免費開戶
 					span
@@ -104,7 +107,7 @@ html(lang="zh-tw")
 						strong 21.5元 
 						| / 尾						
 						img.section__wind(src="./assets/images/win.png")
-				p.wow.fadeInUp.section__text(data-wow-delay="0.5s") 6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元尾。
+				p.wow.fadeInUp.section__text(data-wow-delay="0.5s") 6個月以來，金魚市場平均售價：160元 / 6尾 = 26.7元 / 尾。
 			section.section#meal
 				div.coin
 					div
@@ -141,11 +144,14 @@ html(lang="zh-tw")
 						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.3s")
 							p.setMeal__text 中國A股基金
 								span 純度投資A股，深入中國內地市場
-						div.setMeal__btn(data-wow-delay="0.6s")
-							a.wow.flipInX(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 立即開戶 
-								span 讓投資動起來
-							p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
-								strong 終身0元手續費!
+						div.wow.flipInX.setMeal__btn(data-wow-delay="0.6s")
+							a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 立即開戶 
+								//- span 讓投資動起來
+							span
+							a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank") 我要申購
+						p.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
+							strong 
+								span 終身0元手續費!
 				div.setMeal
 					div.section__loop
 					div
@@ -160,11 +166,14 @@ html(lang="zh-tw")
 						div.wow.fadeInUp.setMeal__item(data-wow-delay="0.5s") 
 							p.setMeal__text 富蘭克林華美新世界股票基金
 								span 佈局全球，分享新興經濟體的高成長動能
-						div.setMeal__btn(data-wow-delay="0.8s")
-							a.wow.flipInX(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 立即開戶 
-								span 讓投資動起來
-							p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
-								strong 終身0元手續費!
+						div.wow.flipInX.setMeal__btn(data-wow-delay="0.8s")
+							a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank") 立即開戶 
+								//- span 讓投資動起來
+							span
+							a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 我要申購
+						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
+							strong 
+								span 終身0元手續費!
 			section.section#online
 				div.coin
 					div
@@ -188,7 +197,8 @@ html(lang="zh-tw")
 					div.wow.flipInX.step__btn(data-wow-delay="0.5s")
 						a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank") 線上開戶 送紅利3000點
 				p.wow.fadeInUp.section__text.highlight(data-wow-delay="0.6s") 最超值的
-					strong 手續費0元
+					strong 
+						span 手續費0元
 					| 優惠
 					span 只到2020/12/31止
 					span
@@ -272,14 +282,14 @@ html(lang="zh-tw")
 					li ・本基金經金融監督管理委員會核准或同意生效，惟不表示本基金絕無風險。本證券投資信託事業以往之經理績效不保證本基金之最低投資收益；本證券投資信託事業除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱本基金公開說明書。
 					li ・基金投資證券交易市場交易之反向型ETF、商品ETF及槓桿型ETF，不得超過該基金淨資產價值之百分之十。
 					li ・中國A股基金主要投資於中國大陸境內之有價證券，雖以分散風險並積極追求長期之投資利得為目標；惟風險無法因分散投資而完全消除，投資人應注意本基金可能產生之風險包括流動性不足風險、市場風險(含國內外政經情勢、兩岸關係之互動、未來發展或法規之變動等)、類股過度集中、產業景氣循環變動等風險，或可能因受益人大量買回，致延遲給付買回價款，遇前述風險時，本基金之淨資產價值可能因此產生波動。另中國大陸為外匯管制市場，資金匯出匯入之限制，或新臺幣兌換人民幣之限制，而可能有匯率相關風險。
-					li ・基於經理公司申請獲得大陸地區合格境外機構投資者之額度及大陸地區相關規定之特定因素，中國A股基金保留婉拒申購或暫停買回之權利。本基金主要投資於與重要新興經濟體經貿往來密切之國家，主要針對新世界市場經濟高速發展下受惠地區進行擇優佈局。
+					li ・基於經理公司申請獲得大陸地區合格境外機構投資者之額度及大陸地區相關規定之特定因素，中國A股基金保留婉拒申購或暫停買回之權利。
+					li ・本基金主要投資於與重要新興經濟體經貿往來密切之國家，主要針對新世界市場經濟高速發展下受惠地區進行擇優佈局。
 					li ・由於新興市場基金之主要投資風險除包含一般股票型基金之投資組合跌價與匯率風險外，與成熟市場相比須承受較高之政治與金融管理風險，而因市值及制度性因素，流動性風險也相對較高，新興市場投資組合波動性普遍高於成熟市場。基金投資均涉及風險且不負任何抵抗投資虧損之擔保。投資風險之詳細資料請參閱基金公開說明書。
 					li ・以上指數試算結果並非代表特定基金之投資成果，亦不代表對特定基金之買賣建議，基金不同於指數，基金可能會有中途清算或合併等情形，投資人無法直接投資指數。本文提及之經濟走勢預測不必然代表本基金之績效，本基金投資風險請詳閱基金公開說明書。
 					li ・本網站提及個股評論並非對個股進行推介、建議或買賣，且並不完全代表本基金之投資標的。本網站提及經濟走勢預測，不必然代表基金之績效，本基金投資風險請詳閱基金公開說明書。本網站資訊僅供參考。本公司自盡力為讀者及客戶提供正確的意見及消息，如有錯漏或疏忽，本公司或關係企業與其任何董事或受僱人，並不負任何法律責任。本網站內容未經同意，不得重製、散布、改作，亦不得轉載於任何形式媒體。
 					li ・
 						span 基金不受存款保險、保險安定基金或其他相關保障機制之保障
 						| 。故投資本基金可能發生部分或全部本金之損失，最大可能損失則為全部投資金額。金融消費爭議處理及申訴管道：就本公司所提供之金融商品或服務所生紛爭投資人應先向本公司提出申訴，若三十日內未獲回覆或投資人不滿意處理結果得於六十日內向「金融消費評議中心」申請評議。 有關基金應負擔之費用已揭露於基金公開說明書或簡式公開說明書中，投資人可向經理公司及基金銷售機構索取，或至公開資訊觀測站及經理公司網站中查詢。
-					li ・【富蘭克林華美投信獨立經營管理】
 		div.fixed
 			div.fixed__container
 				a.fixed__item

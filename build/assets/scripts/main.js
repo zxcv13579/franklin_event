@@ -42,7 +42,7 @@
 
 	var tl = new TimelineMax({paused: true});
 
-	tl.set($('.human'), {y: $('.intro__a').offset().top})
+	tl.set($('.human'), {y: $('.intro__loop').eq(0).offset().top})
 
 
 
@@ -60,7 +60,8 @@
 		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 2})
 		.add([
 			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
-			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"})
+			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
+			TweenMax.to($('body'), 0.1, {className: "+=loop"})
 		], "-=0.2")
 		.fromTo($('.fixed'), 0.5, {alpha: 0}, {alpha: 1})
 		.set($('body'), {overflowY: "auto"})
@@ -91,7 +92,6 @@
 
 	})
 	.setTween(wp1)
-	// .addIndicators('container')
 	.addTo(controller)
 
 
@@ -108,7 +108,6 @@
 
 	})
 	.setTween(wp2)
-	// .addIndicators('container')
 	.addTo(controller)
 
 	var wp3 = new TimelineMax()
@@ -126,7 +125,6 @@
 
 	})
 	.setTween(wp3)
-	// .addIndicators('container')
 	.addTo(controller)
 
 	var wp4 = new TimelineMax()
@@ -142,7 +140,6 @@
 
 	})
 	.setTween(wp4)
-	// .addIndicators('container')
 	.addTo(controller)
 
 	var scene5 = new ScrollMagic.Scene({
@@ -154,7 +151,6 @@
 			TweenMax.to($('#investment .coin').eq(0).find('div'), 0.4, {y: 100}),
 			TweenMax.to($('#investment .coin').eq(1).find('div'), 0.6, {y: -150}),
 		]))
-	// .addIndicators('container')
 	.addTo(controller)
 
 
