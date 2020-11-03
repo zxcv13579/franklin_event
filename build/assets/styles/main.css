@@ -272,7 +272,7 @@ strong {
 .intro {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0; }
   .intro > div {
@@ -384,6 +384,9 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      @media screen and (max-width: 992px) {
+        .section:nth-of-type(1) .section__btn {
+          border-radius: 15px; } }
       .section:nth-of-type(1) .section__btn a {
         position: relative;
         width: 49.9%;
@@ -393,8 +396,13 @@ strong {
         letter-spacing: 0.1em;
         color: #FFFFFF;
         cursor: pointer;
-        padding: 20px 0px;
+        padding: 15px 0px;
         overflow: hidden; }
+        @media screen and (max-width: 992px) {
+          .section:nth-of-type(1) .section__btn a {
+            padding: 10px 0px;
+            font-size: 18px;
+            line-height: 26px; } }
         .section:nth-of-type(1) .section__btn a:first-child::before {
           border-top-left-radius: 25px;
           border-bottom-left-radius: 25px; }
@@ -434,23 +442,17 @@ strong {
         .section:nth-of-type(1) .section__btn a span {
           z-index: 3;
           position: relative; }
-        @media screen and (max-width: 992px) {
-          .section:nth-of-type(1) .section__btn a {
-            font-size: 18px;
-            line-height: 26px; } }
       .section:nth-of-type(1) .section__btn .end::before, .section:nth-of-type(1) .section__btn .end::after {
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0); }
       .section:nth-of-type(1) .section__btn > span {
         width: 1px;
-        height: 36px;
         display: block;
         background-color: #FFF; }
-      @media screen and (max-width: 992px) {
-        .section:nth-of-type(1) .section__btn {
-          padding: 8px 0px;
-          border-radius: 15px; } }
+        @media screen and (max-width: 992px) {
+          .section:nth-of-type(1) .section__btn > span {
+            height: 20px; } }
     @media screen and (max-width: 992px) {
       .section:nth-of-type(1) {
         margin-top: -150px; } }
@@ -508,7 +510,6 @@ strong {
     .section:nth-of-type(2) .section__btn {
       position: relative;
       overflow: hidden;
-      margin-top: 25px;
       width: 100%;
       max-width: 500px;
       margin-top: 25px;
@@ -516,7 +517,7 @@ strong {
       -webkit-box-shadow: 5px 5px 0px rgba(255, 253, 253, 0.5);
       box-shadow: 5px 5px 0px rgba(255, 253, 253, 0.5);
       border-radius: 25px;
-      padding: 15px 0px;
+      padding: 20px 0px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -526,6 +527,9 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      @media screen and (max-width: 992px) {
+        .section:nth-of-type(2) .section__btn {
+          border-radius: 15px; } }
       .section:nth-of-type(2) .section__btn::before, .section:nth-of-type(2) .section__btn::after {
         content: '';
         border-radius: 25px;
@@ -828,6 +832,9 @@ strong {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media screen and (max-width: 992px) {
+      .setMeal__btn {
+        border-radius: 15px; } }
     .setMeal__btn a {
       position: relative;
       display: block;
@@ -840,6 +847,11 @@ strong {
       color: #FFFFFF;
       cursor: pointer;
       overflow: hidden; }
+      @media screen and (max-width: 992px) {
+        .setMeal__btn a {
+          font-size: 18px;
+          line-height: 26px;
+          padding: 6px 0px; } }
       .setMeal__btn a:first-child::before {
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px; }
@@ -879,11 +891,6 @@ strong {
       .setMeal__btn a span {
         z-index: 3;
         position: relative; }
-      @media screen and (max-width: 992px) {
-        .setMeal__btn a {
-          font-size: 18px;
-          line-height: 26px;
-          padding: 6px 0px; } }
     .setMeal__btn .end::before, .setMeal__btn .end::after {
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -1024,7 +1031,8 @@ strong {
           line-height: 26px; } }
     @media screen and (max-width: 992px) {
       .step__btn {
-        padding: 6px 0px; } }
+        padding: 12px 0px;
+        border-radius: 15px; } }
   .step .end::before, .step .end::after {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
