@@ -111,8 +111,8 @@ body {
         background-image: url("../images/mask-m.png"); } }
 
 .loop::after {
-  -webkit-animation: circle 0.5s linear alternate infinite;
-  animation: circle 0.5s linear alternate infinite; }
+  -webkit-animation: circle 0.5s linear 6 alternate;
+  animation: circle 0.5s linear 6 alternate; }
 
 .header {
   display: -webkit-box;

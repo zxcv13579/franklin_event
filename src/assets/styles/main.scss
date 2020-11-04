@@ -72,7 +72,7 @@ body {
 
 .loop {
 	&::after {
-		animation: circle 0.5s linear alternate infinite;
+		animation: circle 0.5s linear 6 alternate;
 	}
 }
 
