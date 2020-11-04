@@ -54,7 +54,7 @@
 		.fromTo($('.intro__b img, .intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
 
 		
-		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 2})
+		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1.5})
 		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
 		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
 		.add([

@@ -329,6 +329,9 @@ strong {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media screen and (max-width: 992px) {
+        .section:nth-of-type(1) .section__btn {
+          border-radius: 15px; } }
       .section:nth-of-type(1) .section__btn a {
         position: relative;
         width: 49.9%;
@@ -338,7 +341,7 @@ strong {
         letter-spacing: 0.1em;
         color: #FFFFFF;
         cursor: pointer;
-        padding: 20px 0px;
+        padding: 15px 0px;
         overflow: hidden; }
         .section:nth-of-type(1) .section__btn a:first-child::before {
           border-top-left-radius: 25px;
@@ -374,16 +377,16 @@ strong {
         @media screen and (max-width: 992px) {
           .section:nth-of-type(1) .section__btn a {
             font-size: 18px;
-            line-height: 26px; } }
+            line-height: 26px;
+            padding: 12px 0px; } }
       .section:nth-of-type(1) .section__btn > span {
         width: 1px;
         height: 36px;
         display: block;
         background-color: #FFF; }
-      @media screen and (max-width: 992px) {
-        .section:nth-of-type(1) .section__btn {
-          padding: 8px 0px;
-          border-radius: 15px; } }
+        @media screen and (max-width: 992px) {
+          .section:nth-of-type(1) .section__btn > span {
+            height: 20px; } }
     @media screen and (max-width: 992px) {
       .section:nth-of-type(1) {
         margin-top: -150px; } }
@@ -480,7 +483,8 @@ strong {
               display: block; } }
       @media screen and (max-width: 992px) {
         .section:nth-of-type(2) .section__btn {
-          padding: 6px 0px; } }
+          padding: 6px 0px;
+          border-radius: 15px; } }
   .section:nth-of-type(3) {
     background: linear-gradient(178.17deg, #FFCE21 0.81%, #F7CE45 9.03%, #F7CE45 56.62%); }
     .section:nth-of-type(3) .title {
@@ -710,6 +714,9 @@ strong {
     justify-content: center;
     align-items: center;
     overflow: hidden; }
+    @media screen and (max-width: 992px) {
+      .setMeal__btn {
+        border-radius: 15px; } }
     .setMeal__btn a {
       position: relative;
       display: block;
@@ -763,6 +770,9 @@ strong {
       height: 36px;
       display: block;
       background-color: #FFF; }
+      @media screen and (max-width: 992px) {
+        .setMeal__btn > span {
+          height: 20px; } }
     @media screen and (max-width: 992px) {
       .setMeal__btn {
         padding: 6px 0px; } }
@@ -869,7 +879,8 @@ strong {
           line-height: 26px; } }
     @media screen and (max-width: 992px) {
       .step__btn {
-        padding: 6px 0px; } }
+        padding: 12px 0px;
+        border-radius: 15px; } }
 
 .footer {
   width: 100%;
@@ -1041,8 +1052,9 @@ strong {
         .fixed__item:nth-of-type(3) {
           width: 100%;
           justify-content: center; } }
-    .fixed__item:hover {
-      transform: translateX(calc(-100% + 60px)); }
+    @media screen and (min-width: 992px) {
+      .fixed__item:hover {
+        transform: translateX(calc(-100% + 60px)); } }
   .fixed__icon {
     width: 28px;
     height: 28px;
