@@ -111,8 +111,8 @@ body {
         background-image: url("../images/mask-m.png"); } }
 
 .loop::after {
-  -webkit-animation: circle 5s linear alternate infinite;
-  animation: circle 5s linear alternate infinite; }
+  -webkit-animation: circle 0.5s linear alternate infinite;
+  animation: circle 0.5s linear alternate infinite; }
 
 .header {
   display: -webkit-box;
@@ -385,9 +385,6 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      @media screen and (max-width: 992px) {
-        .section:nth-of-type(1) .section__btn {
-          border-radius: 15px; } }
       .section:nth-of-type(1) .section__btn a {
         position: relative;
         width: 49.9%;
@@ -397,13 +394,8 @@ strong {
         letter-spacing: 0.1em;
         color: #FFFFFF;
         cursor: pointer;
-        padding: 15px 0px;
+        padding: 20px 0px;
         overflow: hidden; }
-        @media screen and (max-width: 992px) {
-          .section:nth-of-type(1) .section__btn a {
-            padding: 10px 0px;
-            font-size: 18px;
-            line-height: 26px; } }
         .section:nth-of-type(1) .section__btn a:first-child::before {
           border-top-left-radius: 25px;
           border-bottom-left-radius: 25px; }
@@ -447,14 +439,19 @@ strong {
         .section:nth-of-type(1) .section__btn a span {
           z-index: 3;
           position: relative; }
+        @media screen and (max-width: 992px) {
+          .section:nth-of-type(1) .section__btn a {
+            font-size: 18px;
+            line-height: 26px; } }
       .section:nth-of-type(1) .section__btn > span {
         width: 1px;
         height: 36px;
         display: block;
         background-color: #FFF; }
-        @media screen and (max-width: 992px) {
-          .section:nth-of-type(1) .section__btn > span {
-            height: 20px; } }
+      @media screen and (max-width: 992px) {
+        .section:nth-of-type(1) .section__btn {
+          padding: 8px 0px;
+          border-radius: 15px; } }
     @media screen and (max-width: 992px) {
       .section:nth-of-type(1) {
         margin-top: -150px; } }
@@ -512,6 +509,7 @@ strong {
     .section:nth-of-type(2) .section__btn {
       position: relative;
       overflow: hidden;
+      margin-top: 25px;
       width: 100%;
       max-width: 500px;
       margin-top: 25px;
@@ -519,7 +517,7 @@ strong {
       -webkit-box-shadow: 5px 5px 0px rgba(255, 253, 253, 0.5);
       box-shadow: 5px 5px 0px rgba(255, 253, 253, 0.5);
       border-radius: 25px;
-      padding: 20px 0px;
+      padding: 15px 0px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -529,9 +527,6 @@ strong {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      @media screen and (max-width: 992px) {
-        .section:nth-of-type(2) .section__btn {
-          border-radius: 15px; } }
       .section:nth-of-type(2) .section__btn::before, .section:nth-of-type(2) .section__btn::after {
         content: '';
         border-radius: 25px;
@@ -541,7 +536,7 @@ strong {
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(222, 80, 0, 0.5);
         -webkit-transition: -webkit-transform 0.3s;
         transition: -webkit-transform 0.3s;
         -o-transition: transform 0.3s;
@@ -833,10 +828,8 @@ strong {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-    @media screen and (max-width: 992px) {
-      .setMeal__btn {
-        border-radius: 15px; } }
+    align-items: center;
+    overflow: hidden; }
     .setMeal__btn a {
       position: relative;
       display: block;
@@ -849,11 +842,6 @@ strong {
       color: #FFFFFF;
       cursor: pointer;
       overflow: hidden; }
-      @media screen and (max-width: 992px) {
-        .setMeal__btn a {
-          font-size: 18px;
-          line-height: 26px;
-          padding: 6px 0px; } }
       .setMeal__btn a:first-child::before {
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px; }
@@ -897,6 +885,11 @@ strong {
       .setMeal__btn a span {
         z-index: 3;
         position: relative; }
+      @media screen and (max-width: 992px) {
+        .setMeal__btn a {
+          font-size: 18px;
+          line-height: 26px;
+          padding: 6px 0px; } }
     .setMeal__btn > span {
       width: 1px;
       height: 36px;
@@ -1024,6 +1017,7 @@ strong {
       -ms-transform: translate(0, 0);
       transform: translate(0, 0); }
     .step__btn a {
+      overflow: hidden;
       z-index: 3;
       font-size: 28px;
       line-height: 41px;
@@ -1037,8 +1031,7 @@ strong {
           line-height: 26px; } }
     @media screen and (max-width: 992px) {
       .step__btn {
-        padding: 12px 0px;
-        border-radius: 15px; } }
+        padding: 6px 0px; } }
 
 .footer {
   width: 100%;
@@ -1254,11 +1247,10 @@ strong {
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center; } }
-    @media screen and (min-width: 992px) {
-      .fixed__item:hover {
-        -webkit-transform: translateX(calc(-100% + 60px));
-        -ms-transform: translateX(calc(-100% + 60px));
-        transform: translateX(calc(-100% + 60px)); } }
+    .fixed__item:hover {
+      -webkit-transform: translateX(calc(-100% + 60px));
+      -ms-transform: translateX(calc(-100% + 60px));
+      transform: translateX(calc(-100% + 60px)); }
   .fixed__icon {
     width: 28px;
     height: 28px;
