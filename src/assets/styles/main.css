@@ -63,8 +63,7 @@ body, html {
   to {
     transform: scale(1.15) rotate(2deg); } }
 body {
-  overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow: hidden; }
   body::before {
     content: '';
     width: 100%;
@@ -233,7 +232,8 @@ strong {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 1; }
   .intro > div {
     position: absolute;
     top: 50%;
@@ -248,22 +248,23 @@ strong {
       background-image: url("../images/a.png"); }
     .intro > div:nth-of-type(2) .intro__loop {
       background-image: url("../images/b.png"); }
-    @media screen and (max-width: 992px) {
-      .intro > div {
-        max-width: 320px; } }
-  .intro__loop {
-    opacity: 0;
-    width: 100%;
-    background-size: 100% auto;
-    animation: loop 3s steps(2) infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .intro__loop::before {
+    .intro > div:nth-of-type(3) .intro__loop {
+      animation: human 1.5s steps(3) infinite;
+      background-image: url("../images/c.png"); }
+    .intro > div::before {
       content: '';
       padding-bottom: 83.842794%;
       display: block; }
+  .intro__loop {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: 100% auto;
+    animation: loop 3s steps(2) infinite;
+    position: absolute;
+    top: 0%;
+    left: 0%; }
   .intro__sprite {
     opacity: 0;
     position: absolute;
@@ -1450,34 +1451,23 @@ strong {
         display: none; } }
     .section:nth-of-type(3) .coin:nth-of-type(1) {
       position: absolute;
-      bottom: 38%;
-      right: -460px;
-      width: 253px; }
-      .section:nth-of-type(3) .coin:nth-of-type(1) div {
-        background-image: url("../images/coin-big-a.png"); }
-        .section:nth-of-type(3) .coin:nth-of-type(1) div::before {
-          content: '';
-          padding-bottom: 95.652173%;
-          display: block; }
-    .section:nth-of-type(3) .coin:nth-of-type(2) {
-      position: absolute;
       top: 10%;
       right: -240px;
       width: 90px; }
-      .section:nth-of-type(3) .coin:nth-of-type(2) div {
+      .section:nth-of-type(3) .coin:nth-of-type(1) div {
         background-image: url("../images/coin-small-a.png"); }
-        .section:nth-of-type(3) .coin:nth-of-type(2) div::before {
+        .section:nth-of-type(3) .coin:nth-of-type(1) div::before {
           content: '';
           padding-bottom: 93.333333%;
           display: block; }
-    .section:nth-of-type(3) .coin:nth-of-type(3) {
+    .section:nth-of-type(3) .coin:nth-of-type(2) {
       position: absolute;
       bottom: 12%;
       right: -230px;
       width: 190px; }
-      .section:nth-of-type(3) .coin:nth-of-type(3) div {
+      .section:nth-of-type(3) .coin:nth-of-type(2) div {
         background-image: url("../images/coin-big-b.png"); }
-        .section:nth-of-type(3) .coin:nth-of-type(3) div::before {
+        .section:nth-of-type(3) .coin:nth-of-type(2) div::before {
           content: '';
           padding-bottom: 93.684210%;
           display: block; }

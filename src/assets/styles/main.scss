@@ -31,9 +31,9 @@ body, html{
 }
 
 body {
-	overflow-x: hidden;
-	overflow-y: hidden;
-    // overflow: hidden;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
+    overflow: hidden;
 	// margin-top: 450px;
 	&::before {
 		content: '';
@@ -272,6 +272,7 @@ strong {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	> div {
 		position: absolute;
 		top: 50%;
@@ -296,24 +297,31 @@ strong {
 				background-image: url('../images/b.png');
 			}
 		}
-		@media screen and (max-width: $breakpoint-lg) {
-			max-width: 320px;
+		&:nth-of-type(3) {
+			#{$this}__loop {
+				animation: human 1.5s steps(3) infinite;
+				background-image: url('../images/c.png');
+			}
+
 		}
-	}
-	&__loop {
-		opacity: 0;
-		width: 100%;
-		background-size: 100% auto;
-		animation: loop 3s steps(2) infinite;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
 		&::before {
 			content: '';
 			padding-bottom: 83.842794%;
 			display: block;
 		}
+	}
+	&__loop {
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+    	display: block;
+		background-size: 100% auto;
+		animation: loop 3s steps(2) infinite;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		// transform: translate(-50%,-50%);
+		
 	}
 	&__sprite {
 		opacity: 0;
@@ -1624,21 +1632,21 @@ main {
 			}
 			background-repeat: no-repeat;
 			background-position: center;
+			// &:nth-of-type(1) {
+			// 	position: absolute;
+			// 	bottom: 38%;
+   //  			right: -460px;
+			// 	width: 253px;
+			// 	div {
+			// 		background-image: url('../images/coin-big-a.png');
+			// 		&::before {
+			// 			content: '';
+			// 			padding-bottom: 95.652173%;
+			// 			display: block;
+			// 		}
+			// 	}
+			// }
 			&:nth-of-type(1) {
-				position: absolute;
-				bottom: 38%;
-    			right: -460px;
-				width: 253px;
-				div {
-					background-image: url('../images/coin-big-a.png');
-					&::before {
-						content: '';
-						padding-bottom: 95.652173%;
-						display: block;
-					}
-				}
-			}
-			&:nth-of-type(2) {
 				position: absolute;
 				top: 10%;
     			right: -240px;
@@ -1653,7 +1661,7 @@ main {
 
 				}
 			}
-			&:nth-of-type(3) {
+			&:nth-of-type(2) {
 				position: absolute;
 				bottom: 12%;
     			right: -230px;

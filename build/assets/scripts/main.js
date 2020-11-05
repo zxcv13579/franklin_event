@@ -1,4 +1,7 @@
 (function(){
+	//init
+	
+
 	new WOW().init();
 
 	$(".header__hamburger").on('click', function(event) {
@@ -41,27 +44,37 @@
 
 	var tl = new TimelineMax({paused: true});
 
-	tl.set($('.human'), {y: $('.intro__loop').eq(0).offset().top})
+	var _duration = $(window).innerWidth() > 1200 ? -120 : -50;
+
+	// tl.set($('.human'), {y: $('.intro__loop').eq(0).offset().top})
 
 
 
 
 
-	tl.fromTo($('.intro__a img, .intro__a .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1})
-		
-		.fromTo($('.intro__a'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 2})
+	tl.fromTo($('.intro__a .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1})		
+		.fromTo($('.intro__a'), 0.2, {scale: 1.1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
 
-		.fromTo($('.intro__b img, .intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
+		.fromTo($('.intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
+		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
 
-		
-		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1.5})
-		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
-		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
+		.fromTo($('.intro__c .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
+		.fromTo($('.intro__c .intro__loop'), 0.2, {scale: 1.1}, {scale: 1, top: _duration, delay: 1, onComplete: function() {
+			$('.human').css("opacity", 1);
+			$('.intro__c').hide();
+		}})
+
+		// .to($('.intro__c .intro__loop'), 0.5, {top: _duration})
+
+
+
+		// .fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
+		// .to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
 		.add([
 			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
 			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
 			TweenMax.to($('body'), 0.1, {className: "+=loop"})
-		], "-=0.2")
+		], "-=0")
 		.fromTo($('.fixed'), 0.5, {alpha: 0}, {alpha: 1})
 		.set($('body'), {overflowY: "auto"})
 
@@ -96,9 +109,9 @@
 
 	var wp2 = new TimelineMax()
 		.add([
-			TweenMax.to($('#what .coin').eq(0).find('div'), 0.2, {y: -150}),
-			TweenMax.to($('#what .coin').eq(1).find('div'), 0.8, {y: 400}),
-			TweenMax.to($('#what .coin').eq(2).find('div'), 0.6, {y: -50})
+			// TweenMax.to($('#what .coin').eq(0).find('div'), 0.2, {y: -150}),
+			TweenMax.to($('#what .coin').eq(0).find('div'), 0.8, {y: 400}),
+			TweenMax.to($('#what .coin').eq(1).find('div'), 0.6, {y: -50})
 		])
 
 	var scene2 = new ScrollMagic.Scene({
