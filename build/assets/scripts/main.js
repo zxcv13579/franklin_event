@@ -1,7 +1,6 @@
 (function(){
 	//init
 	
-
 	new WOW().init();
 
 	$(".header__hamburger").on('click', function(event) {
@@ -44,46 +43,60 @@
 
 	var tl = new TimelineMax({paused: true});
 
-	var _duration = $(window).innerWidth() > 1200 ? -120 : -50;
+	var _duration = $(window).innerWidth() > 1200 ? -98 : -108;
 
-	// tl.set($('.human'), {y: $('.intro__loop').eq(0).offset().top})
+
+	$('.human').css("transform", `translateY(${$('.intro__a .intro__loop').offset().top}px)`)
+	
 
 
 
 
 
 	tl.fromTo($('.intro__a .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1})		
-		.fromTo($('.intro__a'), 0.2, {scale: 1.1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
+		.fromTo($('.intro__a'), 0.2, {scale: 1.1, alpha: 1}, {scale: 0, alpha: 0, delay: 1, onStart: function() {
+			// tl.set($('.human'), {y: $('.intro__a .intro__loop').offset().top})
+			// $('.human').css("transform", `translateY(${$('.intro__a .intro__loop').offset().top}px)`)
+		}})
 
 		.fromTo($('.intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
 		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
 
-		.fromTo($('.intro__c .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
-		.fromTo($('.intro__c .intro__loop'), 0.2, {scale: 1.1}, {scale: 1, top: _duration, delay: 1, onComplete: function() {
-			$('.human').css("opacity", 1);
-			$('.intro__c').hide();
-		}})
+		// .fromTo($('.intro__c .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
+		// .fromTo($('.intro__c .intro__loop'), 0.5, {scale: 1.1}, {scale: 1, top: _duration, delay: 1, onComplete: function() {
+		// 	setTimeout(function() {
+		// 		$('.human').css("opacity", 1);
+		// 		$('.intro__c').hide();
+		// 	}, 500);
+			
+			
+		// }})
 
 		// .to($('.intro__c .intro__loop'), 0.5, {top: _duration})
 
 
 
-		// .fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
-		// .to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
+		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
+		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
 		.add([
 			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
 			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
 			TweenMax.to($('body'), 0.1, {className: "+=loop"})
-		], "-=0")
+		], "+=0.2")
 		.fromTo($('.fixed'), 0.5, {alpha: 0}, {alpha: 1})
 		.set($('body'), {overflowY: "auto"})
 
 
+	
 	$(window).on('load', function() {
-		setTimeout(function() {
-			$('.load').fadeOut();
-			tl.play();
-		}, 1500)
+		$("html,body").animate({scrollTop: 0}, 100, function() {
+			$('body').css('overflow', 'hidden');
+			setTimeout(function() {
+				$('.load').fadeOut();
+				tl.play();
+			}, 1500)
+		});
+		
 	})
 
 
@@ -164,10 +177,6 @@
 			TweenMax.to($('#investment .coin').eq(1).find('div'), 0.6, {y: -150}),
 		]))
 	.addTo(controller)
-
-
-
-
 
 
 

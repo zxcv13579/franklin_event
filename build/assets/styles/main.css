@@ -73,41 +73,39 @@ body, html {
   to {
     -webkit-transform: scale(1.15) rotate(2deg);
     transform: scale(1.15) rotate(2deg); } }
-body {
-  overflow: hidden; }
-  body::before {
-    content: '';
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    background-image: url("../images/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
-    @media screen and (max-width: 768px) {
-      body::before {
-        background-image: url("../images/bg-m.jpg"); } }
-  body::after {
-    content: '';
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url("../images/mask.png");
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-    -webkit-transform: scale(1.15) rotate(-2deg);
-    -ms-transform: scale(1.15) rotate(-2deg);
-    transform: scale(1.15) rotate(-2deg);
-    z-index: -1; }
-    @media screen and (max-width: 768px) {
-      body::after {
-        background-image: url("../images/mask-m.png"); } }
+body::before {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    body::before {
+      background-image: url("../images/bg-m.jpg"); } }
+body::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../images/mask.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(1.15) rotate(-2deg);
+  -ms-transform: scale(1.15) rotate(-2deg);
+  transform: scale(1.15) rotate(-2deg);
+  z-index: -1; }
+  @media screen and (max-width: 768px) {
+    body::after {
+      background-image: url("../images/mask-m.png"); } }
 
 .loop::after {
   -webkit-animation: circle 0.5s linear 6 alternate;
@@ -244,9 +242,9 @@ body {
     display: block; }
   @media screen and (max-width: 992px) {
     .human {
-      -webkit-transform: translateY(50px);
-      -ms-transform: translateY(50px);
-      transform: translateY(50px);
+      -webkit-transform: translateY(100px);
+      -ms-transform: translateY(100px);
+      transform: translateY(100px);
       max-width: 300px; } }
 
 main {
@@ -286,7 +284,7 @@ strong {
     max-width: 600px; }
     @media screen and (max-width: 992px) {
       .intro > div {
-        max-width: 320px; } }
+        max-width: 300px; } }
     .intro > div:nth-of-type(1) .intro__loop {
       background-image: url("../images/a.png"); }
     .intro > div:nth-of-type(2) .intro__loop {
