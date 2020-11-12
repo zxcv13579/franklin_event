@@ -11,7 +11,7 @@ html(lang="zh-tw")
 		link(rel="stylesheet" href="./assets/styles/main.css")
 	body
 		include /jadeTemplate/_header.jade
-		div.load
+		//- div.load
 			div.loading.preloader
 				span.slice
 				span.slice
@@ -19,7 +19,7 @@ html(lang="zh-tw")
 				span.slice
 				span.slice
 				span.slice
-		div.intro
+		//- div.intro
 			div.intro__a
 				div.intro__loop
 			div.intro__b
@@ -45,10 +45,11 @@ html(lang="zh-tw")
 						span 送紅利3,000點
 				div.section__btn
 					a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank")
-						span 免費開戶
-					span
-					a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
-						span 我要申購
+						p 從小額開始
+							span 讓投資動起來
+					//- span
+					//- a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
+					//- 	span 我要申購
 			section.section#regular
 				div.coin
 					div
@@ -84,7 +85,8 @@ html(lang="zh-tw")
 					div
 				div.coin
 					div
-				h2.wow.zoomIn.title 什麼是定期定額投資?
+				h2.wow.zoomIn.title 什麼是
+					span 定期定額投資?
 				br
 				br
 				p.wow.fadeInUp.section__text 所謂 
@@ -124,7 +126,7 @@ html(lang="zh-tw")
 					div
 				h2.wow.zoomIn.title 定期定額就從
 					br
-					| 2千元買2檔基金開始
+					| 2000元買2檔基金開始
 				br
 				p.wow.fadeInUp.section__text 專為
 					strong 剛要開始投資的你
@@ -151,9 +153,9 @@ html(lang="zh-tw")
 							a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank")
 								span 立即開戶 
 								//- span 讓投資動起來
-							span
-							a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
-								span 我要申購
+							//- span
+							//- a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
+							//- 	span 我要申購
 						p.setMeal__discount(data-wow-delay="0.5s") 網路定期定額
 							strong 
 								span 終身0元手續費!
@@ -175,9 +177,9 @@ html(lang="zh-tw")
 							a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank")
 								span 立即開戶 
 								//- span 讓投資動起來
-							span
-							a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
-								span 我要申購
+							//- span
+							//- a(href="https://etrade.ftft.com.tw/ftft/Login.html" target="_blank")
+							//- 	span 我要申購
 						p.wow.fadeInUp.setMeal__discount(data-wow-delay="0.7s") 網路定期定額
 							strong 
 								span 終身0元手續費!
