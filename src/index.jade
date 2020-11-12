@@ -11,7 +11,7 @@ html(lang="zh-tw")
 		link(rel="stylesheet" href="./assets/styles/main.css")
 	body
 		include /jadeTemplate/_header.jade
-		//- div.load
+		div.load
 			div.loading.preloader
 				span.slice
 				span.slice
@@ -19,7 +19,7 @@ html(lang="zh-tw")
 				span.slice
 				span.slice
 				span.slice
-		//- div.intro
+		div.intro
 			div.intro__a
 				div.intro__loop
 			div.intro__b
@@ -32,17 +32,17 @@ html(lang="zh-tw")
 			section.section#front
 				p.section__text
 						strong 富蘭克林華美 #定期定額 投資
-				p.section__text 每月
-					strong 2,000
-					| 元起就能開始
+				p.section__text 
+					strong 每月2,000元起就能開始
 					span 自動化分批買進
 					| 不必擔心一次買在最高點!
 				br
 				br
-				p.section__text.highlight 新朋友線上開戶
-					span ，
-					strong 
-						span 送紅利3,000點
+				img.section__textImg(src="./assets/images/newFriend.png")
+				//- p.section__text.highlight 新朋友線上開戶
+				//- 	span ，
+				//- 	strong 
+				//- 		span 送紅利3,000點
 				div.section__btn
 					a(href="https://etrade.ftft.com.tw/open/#/shipStep1" target="_blank")
 						p 從小額開始
@@ -131,8 +131,7 @@ html(lang="zh-tw")
 				p.wow.fadeInUp.section__text 專為
 					strong 剛要開始投資的你
 					| 設計，讓你選擇不困難
-					br
-					| 用小額投資加倍累積投資經驗值
+					span  用小額投資加倍累積投資經驗值
 				br
 				br
 				div.setMeal
@@ -304,19 +303,16 @@ html(lang="zh-tw")
 				a.fixed__item(href="https://etrade.ftft.com.tw/open/#/shipStep1")
 					div.fixed__icon
 						img(src="./assets/images/online.svg")
-					div
-						p 線上開戶
-				a.fixed__item(href="https://etrade.ftft.com.tw/ftft/Login.html")
-					div.fixed__icon
-						img(src="./assets/images/money.svg")
-					div
-						p 我要申購
+					p 線
+						span 上
+						span 開
+						span 戶
 				a.fixed__item
 					div.fixed__icon
 						img(src="./assets/images/phone.svg")
-					div
-						p.fixed__tel 需要專人聯絡您?
-							span 請點我
+					p.fixed__tex 專人聯絡
+						//- p.fixed__tel 需要專人聯絡您?
+							//- span 請點我
 
 
 
