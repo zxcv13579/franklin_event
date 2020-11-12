@@ -1174,6 +1174,14 @@ main {
 		color: #F5771A;
 		margin-top: 10px;
 		text-align: center;
+		a {
+			text-decoration: underline;
+			text-decoration-color: #F5771A;
+		}
+		span {
+			font-size: inherit;
+			color: #F5771A;
+		}
 		@media screen and (max-width: $breakpoint-lg) {
 			font-size: 14px;
 			line-height: 20px;

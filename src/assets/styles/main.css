@@ -815,6 +815,12 @@ strong {
     color: #F5771A;
     margin-top: 10px;
     text-align: center; }
+    .setMeal__discount a {
+      text-decoration: underline;
+      text-decoration-color: #F5771A; }
+    .setMeal__discount span {
+      font-size: inherit;
+      color: #F5771A; }
     @media screen and (max-width: 992px) {
       .setMeal__discount {
         font-size: 14px;
