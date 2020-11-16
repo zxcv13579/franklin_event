@@ -41,35 +41,35 @@
 	})
 
 
-	var tl = new TimelineMax({paused: true});
+	// var tl = new TimelineMax({paused: true});
 
-	var _duration = $(window).innerWidth() > 1200 ? -98 : -108;
+	// var _duration = $(window).innerWidth() > 1200 ? -98 : -108;
 
 
-	$('.human').css("transform", `translateY(${$('.intro__a .intro__loop').offset().top}px)`)
+	// $('.human').css("transform", `translateY(${$('.intro__a .intro__loop').offset().top}px)`)
 	
 
 
 
 
 
-	tl.fromTo($('.intro__a .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1})		
-		.fromTo($('.intro__a'), 0.2, {scale: 1.1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
+	// tl.fromTo($('.intro__a .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1})		
+	// 	.fromTo($('.intro__a'), 0.2, {scale: 1.1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
 
-		.fromTo($('.intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
-		.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
+	// 	.fromTo($('.intro__b .intro__loop'), 0.5, {alpha: 0, scale: 0}, {alpha:1, scale: 1.1}, "-=0.2")
+	// 	.fromTo($('.intro__b'), 0.2, {scale: 1, alpha: 1}, {scale: 0, alpha: 0, delay: 1})
 
 
 
-		.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
-		.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
-		.add([
-			TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
-			TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
-			TweenMax.to($('body'), 0.1, {className: "+=loop"})
-		], "+=0.2")
-		.fromTo($('.fixed'), 0.5, {alpha: 0}, {alpha: 1})
-		.set($('body'), {overflowY: "auto"})
+	// 	.fromTo($('.human'), 0.5, {scale: 0, alpha: 0}, {scale: 1.2, alpha: 1})
+	// 	.to($('.human'), 0.5, {scale: 1, y: 120, delay: 1.5})
+	// 	.add([
+	// 		TweenMax.fromTo($('main'), 0.2, {alpha: 0, y: 120}, {alpha: 1, y: 0}),
+	// 		TweenMax.fromTo($('header'), 0.2, {top: "-70px"}, { top: "0px"}),
+	// 		TweenMax.to($('body'), 0.1, {className: "+=loop"})
+	// 	], "+=0.2")
+	// 	.fromTo($('.fixed'), 0.5, {alpha: 0}, {alpha: 1})
+	// 	.set($('body'), {overflowY: "auto"})
 
 
 	
@@ -78,7 +78,8 @@
 			$('body').css('overflow', 'hidden');
 			setTimeout(function() {
 				$('.load').fadeOut();
-				tl.play();
+				$('body').addClass('loop')
+				$('body').css('overflowY', 'auto');
 			}, 1500)
 		});
 		

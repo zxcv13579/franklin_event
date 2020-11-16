@@ -215,7 +215,7 @@ body {
 .human {
 	z-index: 1;
     position: relative;
-	opacity: 0;
+	// opacity: 0;
 	width: 100%;
 	max-width: 600px;
 	display: block;
@@ -1523,7 +1523,7 @@ main {
     	// 	}
     	// }
     	&:nth-of-type(2) {
-    		width: 75px;
+    		width: 50px;
     		background-color: #4E84CE;
     		// @media screen and (max-width: $breakpoint-lg) {
     		// 	width: 100%;
@@ -1534,7 +1534,8 @@ main {
 				font-size: 12px;
 				margin-top: 10px;
 				color: #FFFFFF;
-    			line-height: 4px;
+    			line-height: 1;
+    			text-align: center;
     		}
     	}
     	// @media screen and (min-width: $breakpoint-lg) {
