@@ -941,34 +941,29 @@ strong {
     width: 100%;
     max-width: 420px;
     margin-top: 10px;
-    text-align: center; }
-    .setMeal__discount:nth-of-type(1) {
-      font-size: 18px;
-      line-height: 26px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: #003E8D; }
+    .setMeal__discount a {
+      text-decoration: underline;
+      -webkit-text-decoration-color: #003E8D;
+      text-decoration-color: #003E8D; }
+    .setMeal__discount strong span {
+      font-size: inherit;
       color: #003E8D; }
-      .setMeal__discount:nth-of-type(1) a {
-        text-decoration: underline;
-        -webkit-text-decoration-color: #003E8D;
-        text-decoration-color: #003E8D; }
-      .setMeal__discount:nth-of-type(1) strong span {
-        font-size: inherit;
-        color: #003E8D; }
-    .setMeal__discount:nth-of-type(2) {
-      font-size: 16px;
-      line-height: 24px;
-      color: #EA5504;
-      margin-top: 10px; }
-      .setMeal__discount:nth-of-type(2) a {
-        text-decoration: underline;
-        -webkit-text-decoration-color: #EA5504;
-        text-decoration-color: #EA5504; }
-      .setMeal__discount:nth-of-type(2) strong span {
-        font-size: inherit;
-        color: #EA5504; }
     @media screen and (max-width: 992px) {
       .setMeal__discount {
         font-size: 14px;
         line-height: 20px; } }
+  .setMeal__colorText {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #EA5504;
+    letter-spacing: 0px;
+    letter-spacing: 1px; }
+    .setMeal__colorText strong {
+      font-size: 24px; }
 
 .step {
   width: 100%;

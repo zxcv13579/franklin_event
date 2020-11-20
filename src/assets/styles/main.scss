@@ -1171,41 +1171,33 @@ main {
 		max-width: 420px;
 		margin-top: 10px;
 		text-align: center;
-		&:nth-of-type(1) {
-			font-size: 18px;
-			line-height: 26px;
-			color: #003E8D;
-			a {
-				text-decoration: underline;
-				text-decoration-color: #003E8D;
-			}
-			strong {
-				span {
-					font-size: inherit;
-					color: #003E8D;
-				}
-			}
+		font-size: 18px;
+		line-height: 26px;
+		color: #003E8D;
+		a {
+			text-decoration: underline;
+			text-decoration-color: #003E8D;
 		}
-		&:nth-of-type(2) {
-			font-size: 16px;
-			line-height: 24px;
-			color: #EA5504;
-			margin-top: 10px;
-			a {
-				text-decoration: underline;
-				text-decoration-color: #EA5504;
-			}
-			strong {
-				span {
-					font-size: inherit;
-					color: #EA5504;
-				}
+		strong {
+			span {
+				font-size: inherit;
+				color: #003E8D;
 			}
 		}
 		@media screen and (max-width: $breakpoint-lg) {
 			font-size: 14px;
 			line-height: 20px;
 		}
+	}
+	&__colorText {
+		margin-top: 25px;
+	    font-size: 20px;
+	    color: #EA5504;
+	    letter-spacing: 0px;
+	    letter-spacing: 1px;
+	    strong {
+	    	font-size: 24px;
+	    }
 	}
 }
 
